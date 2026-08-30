@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Principia Press | Technical Knowledge. Clearly Written.</title>
 
-    <meta name="description"
-          content="Principia Press publishes practical technical resources for ECE, VLSI, FPGA, Verilog and electronics.">
-
     <style>
-
-        /* ==============================
-           GLOBAL
-        ============================== */
-
         * {
             margin: 0;
             padding: 0;
@@ -26,54 +19,53 @@
         }
 
         body {
-            font-family: Inter, Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #f7f9fc;
             color: #111827;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-        }
-
-
-        /* ==============================
-           HEADER
-        ============================== */
+        /* HEADER */
 
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
 
+            height: 80px;
+
+            padding: 0 6%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            padding: 18px 6%;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
 
-            background: rgba(255, 255, 255, 0.82);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-
-            border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+            border-bottom: 1px solid #e5e7eb;
         }
+
+        /* LOGO SIZE */
 
         .logo {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 1px;
+            width: 150px;
+            height: 45px;
 
-            background: linear-gradient(
-                90deg,
-                #111827,
-                #2563eb
-            );
-
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
         }
+
+        .logo img {
+            width: 150px;
+            height: 45px;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
+        /* NAVIGATION */
 
         nav {
             display: flex;
@@ -81,20 +73,19 @@
         }
 
         nav a {
+            text-decoration: none;
             color: #374151;
             font-size: 15px;
             font-weight: 600;
-            transition: 0.3s ease;
+
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #2563eb;
         }
 
-
-        /* ==============================
-           HERO
-        ============================== */
+        /* HERO */
 
         .hero-wrapper {
             position: relative;
@@ -103,26 +94,23 @@
             background:
                 radial-gradient(
                     circle at 80% 20%,
-                    rgba(37, 99, 235, 0.18),
+                    rgba(37,99,235,0.18),
                     transparent 35%
                 ),
                 radial-gradient(
                     circle at 10% 80%,
-                    rgba(124, 58, 237, 0.12),
+                    rgba(124,58,237,0.12),
                     transparent 35%
-                ),
-                #f8fafc;
+                );
+
+            background-color: #f8fafc;
         }
 
         .hero {
-            position: relative;
-
-            padding: 125px 6% 120px;
-
             max-width: 1250px;
             margin: auto;
 
-            z-index: 2;
+            padding: 120px 6%;
         }
 
         .hero-label {
@@ -132,44 +120,43 @@
 
             border-radius: 50px;
 
-            background: rgba(37, 99, 235, 0.08);
+            background: #dbeafe;
+
             color: #2563eb;
 
             font-size: 12px;
+
             font-weight: 700;
 
             letter-spacing: 2px;
+
             text-transform: uppercase;
 
             margin-bottom: 25px;
-
-            animation: fadeUp 0.8s ease forwards;
         }
 
         .hero h1 {
-            font-size: clamp(48px, 7vw, 88px);
+            font-size: clamp(48px, 7vw, 85px);
 
             line-height: 1.02;
 
-            max-width: 950px;
+            letter-spacing: -4px;
 
             margin-bottom: 30px;
 
-            letter-spacing: -4px;
-
             color: #0f172a;
-
-            animation: fadeUp 1s ease forwards;
         }
 
         .hero h1 span {
-            background: linear-gradient(
-                90deg,
-                #2563eb,
-                #7c3aed
-            );
+            background:
+                linear-gradient(
+                    90deg,
+                    #2563eb,
+                    #7c3aed
+                );
 
             -webkit-background-clip: text;
+
             -webkit-text-fill-color: transparent;
         }
 
@@ -181,104 +168,53 @@
             color: #64748b;
 
             margin-bottom: 38px;
-
-            animation: fadeUp 1.2s ease forwards;
         }
 
-
-        /* ==============================
-           BUTTON
-        ============================== */
+        /* BUTTON */
 
         .button {
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
 
             padding: 15px 28px;
 
-            background: linear-gradient(
-                135deg,
-                #2563eb,
-                #4f46e5
-            );
+            border-radius: 8px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #4f46e5
+                );
 
             color: white;
 
-            border-radius: 8px;
-
             font-weight: 700;
 
-            box-shadow:
-                0 10px 25px rgba(37, 99, 235, 0.25);
+            text-decoration: none;
 
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
+            box-shadow:
+                0 10px 25px
+                rgba(37,99,235,0.25);
+
+            transition: 0.3s;
         }
 
         .button:hover {
             transform: translateY(-3px);
 
             box-shadow:
-                0 15px 35px rgba(37, 99, 235, 0.35);
+                0 15px 35px
+                rgba(37,99,235,0.35);
         }
 
-        .button:active {
-            transform: translateY(0);
-        }
-
-
-        /* ==============================
-           FLOATING BACKGROUND
-        ============================== */
-
-        .orb {
-            position: absolute;
-
-            border-radius: 50%;
-
-            filter: blur(2px);
-
-            opacity: 0.5;
-
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .orb.one {
-            width: 180px;
-            height: 180px;
-
-            background: #bfdbfe;
-
-            right: 5%;
-            top: 15%;
-        }
-
-        .orb.two {
-            width: 100px;
-            height: 100px;
-
-            background: #ddd6fe;
-
-            left: 8%;
-            bottom: 10%;
-
-            animation-delay: 2s;
-        }
-
-
-        /* ==============================
-           SECTIONS
-        ============================== */
+        /* SECTIONS */
 
         section {
-            padding: 100px 6%;
-
             max-width: 1250px;
 
             margin: auto;
+
+            padding: 100px 6%;
         }
 
         .section-title {
@@ -286,57 +222,35 @@
 
             margin-bottom: 45px;
 
-            letter-spacing: -1.5px;
-
-            color: #0f172a;
+            letter-spacing: -1px;
         }
 
-        .section-subtitle {
-            color: #64748b;
-
-            max-width: 650px;
-
-            margin-top: -30px;
-
-            margin-bottom: 45px;
-        }
-
-
-        /* ==============================
-           BOOK SECTION
-        ============================== */
-
-        #books {
-            background: #ffffff;
-        }
+        /* BOOK */
 
         .book-container {
             display: grid;
 
-            grid-template-columns:
-                1fr 1.4fr;
+            grid-template-columns: 1fr 1.4fr;
 
             gap: 50px;
 
             align-items: center;
         }
 
-
-        /* BOOK COVER PLACEHOLDER */
-
         .book-cover {
             min-height: 390px;
 
-            border-radius: 18px;
+            padding: 40px;
 
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             text-align: center;
 
-            padding: 40px;
+            border-radius: 18px;
 
             color: white;
 
@@ -349,11 +263,12 @@
                 );
 
             box-shadow:
-                0 25px 60px rgba(15, 23, 42, 0.25);
+                0 25px 60px
+                rgba(15,23,42,0.25);
 
             transform: rotate(-2deg);
 
-            transition: 0.5s ease;
+            transition: 0.4s;
         }
 
         .book-cover:hover {
@@ -363,70 +278,55 @@
         }
 
         .book-cover-content {
-            border: 1px solid rgba(255,255,255,0.25);
+            width: 100%;
 
             padding: 35px 25px;
 
-            width: 100%;
+            border:
+                1px solid
+                rgba(255,255,255,0.25);
 
             border-radius: 10px;
-        }
-
-        .book-cover small {
-            letter-spacing: 3px;
-
-            font-size: 11px;
-
-            opacity: 0.8;
         }
 
         .book-cover h3 {
             font-size: 30px;
 
-            margin: 25px 0;
-
             line-height: 1.2;
+
+            margin: 25px 0;
         }
-
-
-        /* BOOK INFO */
 
         .book-card {
             padding: 45px;
 
             border-radius: 18px;
 
-            background: rgba(255,255,255,0.75);
+            background: white;
 
             border: 1px solid #e2e8f0;
 
             box-shadow:
-                0 20px 50px rgba(15,23,42,0.08);
+                0 20px 50px
+                rgba(15,23,42,0.08);
 
-            backdrop-filter: blur(10px);
-
-            transition: 0.4s ease;
+            transition: 0.4s;
         }
 
         .book-card:hover {
             transform: translateY(-6px);
-
-            box-shadow:
-                0 30px 65px rgba(15,23,42,0.12);
         }
 
         .book-category {
-            display: inline-block;
+            color: #2563eb;
 
             font-size: 12px;
 
-            text-transform: uppercase;
+            font-weight: 700;
 
             letter-spacing: 2px;
 
-            font-weight: 700;
-
-            color: #2563eb;
+            text-transform: uppercase;
 
             margin-bottom: 15px;
         }
@@ -437,8 +337,6 @@
             line-height: 1.15;
 
             margin-bottom: 18px;
-
-            color: #0f172a;
         }
 
         .book-card p {
@@ -447,8 +345,6 @@
             font-size: 17px;
 
             margin-bottom: 25px;
-
-            max-width: 600px;
         }
 
         .price {
@@ -456,21 +352,16 @@
 
             font-weight: 800;
 
-            color: #111827;
-
             margin-bottom: 25px;
         }
 
-
-        /* ==============================
-           CATEGORIES
-        ============================== */
+        /* CATEGORIES */
 
         .categories {
             display: grid;
 
             grid-template-columns:
-                repeat(4, 1fr);
+                repeat(4,1fr);
 
             gap: 18px;
         }
@@ -486,57 +377,20 @@
 
             font-weight: 700;
 
-            color: #1e293b;
-
-            transition: 0.35s ease;
-
-            position: relative;
-
-            overflow: hidden;
-        }
-
-        .category::before {
-            content: "";
-
-            position: absolute;
-
-            left: 0;
-            top: 0;
-
-            width: 100%;
-            height: 4px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #2563eb,
-                    #7c3aed
-                );
-
-            transform: scaleX(0);
-
-            transform-origin: left;
-
-            transition: 0.35s ease;
+            transition: 0.3s;
         }
 
         .category:hover {
             transform: translateY(-7px);
 
-            border-color: #bfdbfe;
+            border-color: #93c5fd;
 
             box-shadow:
-                0 15px 35px rgba(37,99,235,0.10);
+                0 15px 35px
+                rgba(37,99,235,0.10);
         }
 
-        .category:hover::before {
-            transform: scaleX(1);
-        }
-
-
-        /* ==============================
-           ABOUT
-        ============================== */
+        /* ABOUT */
 
         .about {
             max-width: 850px;
@@ -547,13 +401,10 @@
 
             color: #64748b;
 
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
-
-        /* ==============================
-           FOOTER
-        ============================== */
+        /* FOOTER */
 
         footer {
             background: #0f172a;
@@ -566,8 +417,6 @@
 
             justify-content: space-between;
 
-            align-items: center;
-
             flex-wrap: wrap;
 
             gap: 20px;
@@ -576,85 +425,46 @@
         footer a {
             color: #cbd5e1;
 
-            margin-left: 25px;
+            text-decoration: none;
 
-            transition: 0.3s ease;
+            margin-left: 25px;
         }
 
         footer a:hover {
             color: white;
         }
 
-
-        /* ==============================
-           ANIMATIONS
-        ============================== */
-
-        @keyframes fadeUp {
-
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
-        @keyframes float {
-
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-25px);
-            }
-
-        }
-
-
-        /* ==============================
-           RESPONSIVE
-        ============================== */
+        /* MOBILE */
 
         @media (max-width: 850px) {
-
-            nav {
-                gap: 15px;
-            }
-
-            nav a {
-                font-size: 13px;
-            }
 
             .book-container {
                 grid-template-columns: 1fr;
             }
 
-            .book-cover {
-                min-height: 330px;
-            }
-
             .categories {
                 grid-template-columns:
-                    repeat(2, 1fr);
+                    repeat(2,1fr);
             }
 
         }
 
-
         @media (max-width: 600px) {
 
             header {
-                padding: 17px 5%;
+                height: 70px;
+
+                padding: 0 5%;
             }
 
             .logo {
-                font-size: 18px;
+                width: 120px;
+                height: 40px;
+            }
+
+            .logo img {
+                width: 120px;
+                height: 40px;
             }
 
             nav {
@@ -666,9 +476,7 @@
             }
 
             .hero {
-                padding:
-                    90px 5%
-                    80px;
+                padding: 90px 5%;
             }
 
             .hero h1 {
@@ -677,42 +485,20 @@
                 letter-spacing: -2px;
             }
 
-            .hero p {
-                font-size: 17px;
-            }
-
             section {
-                padding:
-                    70px 5%;
-            }
-
-            .section-title {
-                font-size: 34px;
-            }
-
-            .book-card {
-                padding: 30px;
-            }
-
-            .book-card h3 {
-                font-size: 28px;
+                padding: 70px 5%;
             }
 
             .categories {
                 grid-template-columns: 1fr;
             }
 
-            footer {
-                padding: 30px 5%;
-
-                align-items: flex-start;
-
-                flex-direction: column;
+            .book-card {
+                padding: 30px;
             }
 
-            footer a {
-                margin-left: 0;
-                margin-right: 18px;
+            footer {
+                padding: 30px 5%;
             }
 
         }
@@ -724,15 +510,17 @@
 <body>
 
 
-<!-- ==============================
-     HEADER
-============================== -->
-
 <header>
 
     <div class="logo">
-    <img src="pp.png" alt="Principia Press">
-</div>
+
+        <img
+            src="pp.png"
+            alt="Principia Press Logo"
+        >
+
+    </div>
+
 
     <nav>
 
@@ -753,14 +541,7 @@
 </header>
 
 
-<!-- ==============================
-     HERO
-============================== -->
-
 <div class="hero-wrapper">
-
-    <div class="orb one"></div>
-    <div class="orb two"></div>
 
     <section
         class="hero"
@@ -794,9 +575,7 @@
             href="#books"
             class="button"
         >
-
             Explore E-Books
-
         </a>
 
     </section>
@@ -804,29 +583,15 @@
 </div>
 
 
-<!-- ==============================
-     BOOKS
-============================== -->
-
 <section id="books">
 
     <h2 class="section-title">
         Featured E-Book
     </h2>
 
-    <p class="section-subtitle">
-
-        Practical engineering resources designed
-        for learning, revision and technical
-        interview preparation.
-
-    </p>
-
 
     <div class="book-container">
 
-
-        <!-- BOOK COVER -->
 
         <div class="book-cover">
 
@@ -853,8 +618,6 @@
         </div>
 
 
-        <!-- BOOK INFORMATION -->
-
         <div class="book-card">
 
             <div class="book-category">
@@ -867,28 +630,20 @@
             </h3>
 
             <p>
-
                 A practical introduction to
                 Verilog HDL, digital design
                 and RTL implementation.
-
             </p>
 
             <div class="price">
                 ₹49
             </div>
 
-
-            <!-- RAZORPAY PAYMENT LINK
-                 WILL GO HERE -->
-
             <a
                 href="#"
                 class="button"
             >
-
                 Buy Now
-
             </a>
 
         </div>
@@ -897,10 +652,6 @@
 
 </section>
 
-
-<!-- ==============================
-     CATEGORIES
-============================== -->
 
 <section>
 
@@ -932,10 +683,6 @@
 </section>
 
 
-<!-- ==============================
-     ABOUT
-============================== -->
-
 <section id="about">
 
     <div class="about">
@@ -945,22 +692,18 @@
         </h2>
 
         <p>
-
             Principia Press is an independent
             technical publishing initiative
             focused on making engineering
             knowledge practical, accessible
             and clearly organized.
-
         </p>
 
         <p>
-
             Our resources focus on Electronics
             and Electrical Engineering topics
             including Digital Electronics,
             VLSI, FPGA and RTL Design.
-
         </p>
 
     </div>
@@ -968,18 +711,11 @@
 </section>
 
 
-<!-- ==============================
-     FOOTER
-============================== -->
-
 <footer>
 
     <div>
-
         © 2026 Principia Press
-
     </div>
-
 
     <div>
 
