@@ -2,12 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Principia Press | Technical Knowledge. Clearly Written.</title>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Principia Press | Technical Knowledge. Clearly Written.
+    </title>
+
+    <meta
+        name="description"
+        content="Principia Press publishes practical technical e-books and resources covering Electronics, VLSI, FPGA, Verilog HDL and Digital Design."
+    >
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -19,72 +32,121 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f9fc;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 80% 10%,
+                    rgba(37,99,235,0.12),
+                    transparent 35%
+                ),
+                #f8fafc;
+
             color: #111827;
+
             line-height: 1.6;
         }
 
-        /* HEADER */
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
 
             height: 80px;
 
             padding: 0 6%;
 
             display: flex;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             align-items: center;
 
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(12px);
+            position: sticky;
 
-            border-bottom: 1px solid #e5e7eb;
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(255,255,255,0.90);
+
+            backdrop-filter:
+                blur(12px);
+
+            border-bottom:
+                1px solid #e5e7eb;
         }
 
-        /* LOGO SIZE */
 
-.logo {
-    width: 400px;
-    height: 60px;
-}
+        /* LOGO */
 
-.logo img {
-    width: 400px;
-    height: 60px;
-    object-fit: contain;
-}
+        .logo {
+
+            width: 200px;
+
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+        }
+
+        .logo img {
+
+            width: 200px;
+
+            height: 55px;
+
+            object-fit: contain;
+
             display: block;
         }
+
 
         /* NAVIGATION */
 
         nav {
+
             display: flex;
-            gap: 65px;
+
+            gap: 45px;
         }
 
         nav a {
+
             text-decoration: none;
+
             color: #374151;
+
             font-size: 15px;
+
             font-weight: 600;
 
             transition: 0.3s;
         }
 
         nav a:hover {
+
             color: #2563eb;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero-wrapper {
+
             position: relative;
+
             overflow: hidden;
 
             background:
@@ -93,32 +155,41 @@
                     rgba(37,99,235,0.18),
                     transparent 35%
                 ),
+
                 radial-gradient(
                     circle at 10% 80%,
                     rgba(124,58,237,0.12),
                     transparent 35%
                 );
-
-            background-color: #f8fafc;
         }
+
 
         .hero {
+
             max-width: 1250px;
+
             margin: auto;
 
-            padding: 120px 6%;
+            padding:
+                120px 6%
+                120px;
         }
 
+
         .hero-label {
+
             display: inline-block;
 
-            padding: 7px 14px;
+            padding:
+                7px 14px;
 
             border-radius: 50px;
 
-            background: #dbeafe;
+            background:
+                #dbeafe;
 
-            color: #2563eb;
+            color:
+                #2563eb;
 
             font-size: 12px;
 
@@ -131,19 +202,25 @@
             margin-bottom: 25px;
         }
 
-        .hero h1 {
-            font-size: clamp(48px, 7vw, 85px);
 
-            line-height: 1.02;
+        .hero h1 {
+
+            font-size:
+                clamp(48px, 7vw, 85px);
+
+            line-height: 1.05;
 
             letter-spacing: -4px;
 
             margin-bottom: 30px;
 
-            color: #0f172a;
+            color:
+                #0f172a;
         }
 
+
         .hero h1 span {
+
             background:
                 linear-gradient(
                     90deg,
@@ -151,13 +228,17 @@
                     #7c3aed
                 );
 
-            -webkit-background-clip: text;
+            -webkit-background-clip:
+                text;
 
-            -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color:
+                transparent;
         }
 
+
         .hero p {
-            max-width: 680px;
+
+            max-width: 700px;
 
             font-size: 20px;
 
@@ -166,12 +247,17 @@
             margin-bottom: 38px;
         }
 
-        /* BUTTON */
+
+        /* =========================
+           BUTTON
+        ========================= */
 
         .button {
+
             display: inline-block;
 
-            padding: 15px 28px;
+            padding:
+                15px 28px;
 
             border-radius: 8px;
 
@@ -195,46 +281,68 @@
             transition: 0.3s;
         }
 
+
         .button:hover {
-            transform: translateY(-3px);
+
+            transform:
+                translateY(-3px);
 
             box-shadow:
                 0 15px 35px
                 rgba(37,99,235,0.35);
         }
 
-        /* SECTIONS */
+
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
+
             max-width: 1250px;
 
             margin: auto;
 
-            padding: 100px 6%;
+            padding:
+                100px 6%;
         }
 
+
         .section-title {
+
             font-size: 42px;
 
             margin-bottom: 45px;
 
             letter-spacing: -1px;
+
+            color:
+                #0f172a;
         }
 
-        /* BOOK */
+
+        /* =========================
+           E-BOOK SECTION
+        ========================= */
 
         .book-container {
+
             display: grid;
 
-            grid-template-columns: 1fr 1.4fr;
+            grid-template-columns:
+                1fr 1.4fr;
 
             gap: 50px;
 
             align-items: center;
         }
 
+
+        /* BOOK COVER */
+
         .book-cover {
-            min-height: 390px;
+
+            min-height: 430px;
 
             padding: 40px;
 
@@ -262,21 +370,28 @@
                 0 25px 60px
                 rgba(15,23,42,0.25);
 
-            transform: rotate(-2deg);
+            transform:
+                rotate(-2deg);
 
-            transition: 0.4s;
+            transition:
+                0.4s;
         }
 
+
         .book-cover:hover {
+
             transform:
                 rotate(0deg)
                 translateY(-8px);
         }
 
+
         .book-cover-content {
+
             width: 100%;
 
-            padding: 35px 25px;
+            padding:
+                35px 25px;
 
             border:
                 1px solid
@@ -285,36 +400,64 @@
             border-radius: 10px;
         }
 
+
+        .book-cover-content small {
+
+            letter-spacing: 2px;
+
+            font-weight: 700;
+        }
+
+
         .book-cover h3 {
+
             font-size: 30px;
 
             line-height: 1.2;
 
-            margin: 25px 0;
+            margin:
+                25px 0;
         }
 
+
+        /* BOOK INFORMATION */
+
         .book-card {
+
             padding: 45px;
 
             border-radius: 18px;
 
-            background: white;
+            background:
+                white;
 
-            border: 1px solid #e2e8f0;
+            border:
+                1px solid #e2e8f0;
 
             box-shadow:
                 0 20px 50px
                 rgba(15,23,42,0.08);
 
-            transition: 0.4s;
+            transition:
+                0.4s;
         }
+
 
         .book-card:hover {
-            transform: translateY(-6px);
+
+            transform:
+                translateY(-6px);
+
+            box-shadow:
+                0 25px 60px
+                rgba(15,23,42,0.12);
         }
 
+
         .book-category {
-            color: #2563eb;
+
+            color:
+                #2563eb;
 
             font-size: 12px;
 
@@ -322,12 +465,15 @@
 
             letter-spacing: 2px;
 
-            text-transform: uppercase;
+            text-transform:
+                uppercase;
 
             margin-bottom: 15px;
         }
 
+
         .book-card h3 {
+
             font-size: 36px;
 
             line-height: 1.15;
@@ -335,15 +481,20 @@
             margin-bottom: 18px;
         }
 
+
         .book-card p {
-            color: #64748b;
+
+            color:
+                #64748b;
 
             font-size: 17px;
 
             margin-bottom: 25px;
         }
 
+
         .price {
+
             font-size: 32px;
 
             font-weight: 800;
@@ -351,160 +502,356 @@
             margin-bottom: 25px;
         }
 
-        /* CATEGORIES */
+
+        /* =========================
+           CATEGORY SECTION
+        ========================= */
 
         .categories {
+
             display: grid;
 
             grid-template-columns:
                 repeat(4,1fr);
 
-            gap: 18px;
+            gap: 20px;
         }
 
+
         .category {
-            padding: 30px 25px;
 
-            border-radius: 14px;
+            padding: 32px 25px;
 
-            background: white;
+            border-radius: 16px;
 
-            border: 1px solid #e2e8f0;
+            background:
+                white;
+
+            border:
+                1px solid #e2e8f0;
 
             font-weight: 700;
 
-            transition: 0.3s;
-        }
-
-        .category:hover {
-            transform: translateY(-7px);
-
-            border-color: #93c5fd;
+            transition:
+                0.3s;
 
             box-shadow:
-                0 15px 35px
+                0 10px 30px
+                rgba(15,23,42,0.04);
+        }
+
+
+        .category:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                #93c5fd;
+
+            box-shadow:
+                0 20px 40px
                 rgba(37,99,235,0.10);
         }
 
-        /* ABOUT */
 
-        .about {
+        .category span {
+
+            display: block;
+
+            color:
+                #64748b;
+
+            font-size: 14px;
+
+            font-weight: 400;
+
+            margin-top: 8px;
+        }
+
+
+        /* =========================
+           ABOUT PREVIEW
+        ========================= */
+
+        .about-preview {
+
             max-width: 850px;
         }
 
-        .about p {
+
+        .about-preview p {
+
             font-size: 19px;
 
-            color: #64748b;
+            color:
+                #64748b;
 
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           CALL TO ACTION
+        ========================= */
+
+        .cta {
+
+            margin-top: 30px;
+
+            padding: 50px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #1e3a8a
+                );
+
+            color: white;
+
+            box-shadow:
+                0 25px 55px
+                rgba(15,23,42,0.20);
+        }
+
+
+        .cta h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .cta p {
+
+            color:
+                #cbd5e1;
+
+            max-width: 700px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .cta .button {
+
+            background:
+                white;
+
+            color:
+                #1e3a8a;
+
+            box-shadow: none;
+        }
+
+
+        .cta .button:hover {
+
+            background:
+                #eff6ff;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            background: #0f172a;
 
-            color: #94a3b8;
+            background:
+                #0f172a;
 
-            padding: 40px 6%;
+            color:
+                #94a3b8;
+
+            padding:
+                40px 6%;
 
             display: flex;
 
-            justify-content: space-between;
+            justify-content:
+                space-between;
 
             flex-wrap: wrap;
 
             gap: 20px;
         }
 
+
         footer a {
-            color: #cbd5e1;
+
+            color:
+                #cbd5e1;
 
             text-decoration: none;
 
             margin-left: 25px;
         }
 
+
         footer a:hover {
+
             color: white;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 850px) {
 
             .book-container {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
+
             .categories {
+
                 grid-template-columns:
                     repeat(2,1fr);
             }
 
+
+            nav {
+
+                gap: 20px;
+            }
+
         }
+
 
         @media (max-width: 600px) {
 
             header {
+
                 height: 70px;
 
-                padding: 0 5%;
+                padding:
+                    0 5%;
             }
+
 
             .logo {
+
                 width: 120px;
+
                 height: 40px;
             }
+
 
             .logo img {
+
                 width: 120px;
+
                 height: 40px;
             }
 
+
             nav {
+
                 gap: 12px;
             }
 
+
             nav a {
+
                 font-size: 12px;
             }
 
+
             .hero {
-                padding: 90px 5%;
+
+                padding:
+                    80px 5%
+                    80px;
             }
+
 
             .hero h1 {
-                font-size: 48px;
 
-                letter-spacing: -2px;
+                font-size:
+                    48px;
+
+                letter-spacing:
+                    -2px;
             }
+
 
             section {
-                padding: 70px 5%;
+
+                padding:
+                    70px 5%;
             }
+
 
             .categories {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
+
             .book-card {
+
                 padding: 30px;
             }
 
+
+            .book-card h3 {
+
+                font-size: 29px;
+            }
+
+
+            .cta {
+
+                padding: 30px;
+            }
+
+
+            .cta h2 {
+
+                font-size: 30px;
+            }
+
+
             footer {
-                padding: 30px 5%;
+
+                padding:
+                    30px 5%;
+
+                flex-direction:
+                    column;
+            }
+
+
+            footer a {
+
+                margin-left: 0;
+
+                margin-right: 18px;
             }
 
         }
 
     </style>
+
 </head>
 
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -512,7 +859,7 @@
 
         <img
             src="pp.png"
-            alt="Principia Press Logo"
+            alt="Principia Press"
         >
 
     </div>
@@ -520,7 +867,7 @@
 
     <nav>
 
-        <a href="#home">
+        <a href="index.html">
             Home
         </a>
 
@@ -528,14 +875,18 @@
             E-Books
         </a>
 
-       <a href="about.html">
-    About
-</a>
+        <a href="about.html">
+            About
+        </a>
 
     </nav>
 
 </header>
 
+
+<!-- =========================
+     HERO
+========================= -->
 
 <div class="hero-wrapper">
 
@@ -545,12 +896,16 @@
     >
 
         <div class="hero-label">
+
             Independent Technical Publishing
+
         </div>
+
 
         <h1>
 
             Technical Knowledge.
+
             <br>
 
             <span>
@@ -559,19 +914,23 @@
 
         </h1>
 
+
         <p>
 
-            Practical technical resources for
-            Electronics, VLSI, FPGA, Verilog
-            and digital design.
+            Practical technical resources
+            for Electronics, VLSI, FPGA,
+            Verilog HDL and digital design.
 
         </p>
+
 
         <a
             href="#books"
             class="button"
         >
+
             Explore E-Books
+
         </a>
 
     </section>
@@ -579,15 +938,23 @@
 </div>
 
 
+<!-- =========================
+     E-BOOKS
+========================= -->
+
 <section id="books">
 
     <h2 class="section-title">
+
         Featured E-Book
+
     </h2>
 
 
     <div class="book-container">
 
+
+        <!-- BOOK COVER -->
 
         <div class="book-cover">
 
@@ -597,13 +964,21 @@
                     PRINCIPIA PRESS
                 </small>
 
+
                 <h3>
+
                     Verilog HDL
+
                     <br>
+
                     From Basics
+
                     <br>
+
                     to RTL Design
+
                 </h3>
+
 
                 <small>
                     TECHNICAL E-BOOK
@@ -614,32 +989,50 @@
         </div>
 
 
+        <!-- BOOK DETAILS -->
+
         <div class="book-card">
 
             <div class="book-category">
+
                 Verilog HDL
+
             </div>
+
 
             <h3>
+
                 Verilog HDL:
                 From Basics to RTL Design
+
             </h3>
 
+
             <p>
-                A practical introduction to
-                Verilog HDL, digital design
+
+                A practical introduction
+                to Verilog HDL, digital design
                 and RTL implementation.
+
             </p>
 
+
             <div class="price">
+
                 ₹49
+
             </div>
+
+
+            <!-- PAYMENT LINK WILL GO HERE -->
 
             <a
                 href="#"
                 class="button"
             >
+
                 Buy Now
+
             </a>
 
         </div>
@@ -649,78 +1042,184 @@
 </section>
 
 
+<!-- =========================
+     AREAS
+========================= -->
+
 <section>
 
     <h2 class="section-title">
+
         Areas We Cover
+
     </h2>
 
 
     <div class="categories">
 
+
         <div class="category">
+
             Digital Electronics
+
+            <span>
+                Fundamentals and digital design
+            </span>
+
         </div>
 
+
         <div class="category">
+
             VLSI
+
+            <span>
+                CMOS, ASIC and VLSI concepts
+            </span>
+
         </div>
 
+
         <div class="category">
+
             FPGA
+
+            <span>
+                FPGA design and prototyping
+            </span>
+
         </div>
 
+
         <div class="category">
+
             Verilog HDL
+
+            <span>
+                RTL design and hardware description
+            </span>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<section id="about">
+<!-- =========================
+     ABOUT PREVIEW
+========================= -->
 
-    <div class="about">
+<section>
+
+    <div class="about-preview">
 
         <h2 class="section-title">
+
             About Principia Press
+
         </h2>
 
-        <p>
-            Principia Press is an independent
-            technical publishing initiative
-            focused on making engineering
-            knowledge practical, accessible
-            and clearly organized.
-        </p>
 
         <p>
-            Our resources focus on Electronics
-            and Electrical Engineering topics
-            including Digital Electronics,
-            VLSI, FPGA and RTL Design.
+
+            Principia Press is an independent
+            technical publishing initiative focused
+            on making engineering knowledge
+            practical, accessible and clearly organized.
+
         </p>
+
+
+        <p>
+
+            We create technical e-books and
+            learning resources covering Electronics,
+            Digital Design, VLSI, FPGA,
+            Verilog HDL and RTL Design.
+
+        </p>
+
+
+        <a
+            href="about.html"
+            class="button"
+        >
+
+            Learn More About Us
+
+        </a>
 
     </div>
 
 </section>
 
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section>
+
+    <div class="cta">
+
+        <h2>
+
+            Learn. Build. Understand.
+
+        </h2>
+
+
+        <p>
+
+            Explore practical technical resources
+            created to make engineering concepts
+            easier to study, revise and apply.
+
+        </p>
+
+
+        <a
+            href="#books"
+            class="button"
+        >
+
+            Explore E-Books
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
     <div>
+
         © 2026 Principia Press
+
     </div>
+
 
     <div>
 
         <a href="privacy.html">
+
             Privacy Policy
+
         </a>
 
+
         <a href="contact.html">
+
             Contact
+
         </a>
 
     </div>
@@ -729,4 +1228,5 @@
 
 
 </body>
+
 </html>
