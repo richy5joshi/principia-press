@@ -16,14 +16,14 @@
 
     <meta
         name="description"
-        content="Principia Press publishes practical technical e-books and resources covering Electronics, VLSI, FPGA, Verilog HDL and Digital Design."
+        content="Principia Press publishes practical technical resources for Electronics, VLSI, FPGA, Verilog HDL and Digital Design."
     >
 
     <style>
 
-        /* =========================================
-           GLOBAL
-        ========================================= */
+        /* =====================================================
+           RESET
+        ===================================================== */
 
         * {
             margin: 0;
@@ -31,9 +31,11 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
 
@@ -50,22 +52,21 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            HEADER
-        ========================================= */
+        ===================================================== */
 
         header {
 
-            height: 80px;
+            height: 82px;
 
             padding: 0 6%;
 
             display: flex;
 
-            justify-content:
-                space-between;
-
             align-items: center;
+
+            justify-content: space-between;
 
             position: sticky;
 
@@ -74,7 +75,7 @@
             z-index: 1000;
 
             background:
-                rgba(255,255,255,0.94);
+                rgba(255,255,255,0.96);
 
             backdrop-filter:
                 blur(15px);
@@ -84,24 +85,27 @@
         }
 
 
-        /* LOGO */
+        /* =====================================================
+           HEADER LOGO
+        ===================================================== */
 
         .logo {
 
-            width: 200px;
+            width: 190px;
 
-            height: 55px;
+            height: 60px;
 
             display: flex;
 
             align-items: center;
         }
 
+
         .logo img {
 
-            width: 200px;
+            width: 190px;
 
-            height: 55px;
+            height: 60px;
 
             object-fit: contain;
 
@@ -109,14 +113,19 @@
         }
 
 
-        /* NAVIGATION */
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
 
         nav {
 
             display: flex;
 
-            gap: 45px;
+            align-items: center;
+
+            gap: 42px;
         }
+
 
         nav a {
 
@@ -134,6 +143,7 @@
                 color 0.3s ease;
         }
 
+
         nav a::after {
 
             content: "";
@@ -142,7 +152,7 @@
 
             left: 0;
 
-            bottom: -7px;
+            bottom: -8px;
 
             width: 0;
 
@@ -151,18 +161,20 @@
             background:
                 linear-gradient(
                     90deg,
-                    #2563eb,
-                    #7c3aed
+                    #c89b3c,
+                    #f5d98b
                 );
 
             transition:
                 width 0.3s ease;
         }
 
+
         nav a:hover {
 
-            color: #2563eb;
+            color: #b88620;
         }
+
 
         nav a:hover::after {
 
@@ -170,9 +182,9 @@
         }
 
 
-        /* =========================================
-           HERO
-        ========================================= */
+        /* =====================================================
+           HERO WRAPPER
+        ===================================================== */
 
         .hero-wrapper {
 
@@ -183,22 +195,22 @@
             background:
 
                 radial-gradient(
-                    circle at 75% 20%,
-                    rgba(59,130,246,0.35),
-                    transparent 32%
+                    circle at 80% 15%,
+                    rgba(245,217,139,0.18),
+                    transparent 30%
                 ),
 
                 radial-gradient(
-                    circle at 15% 80%,
-                    rgba(124,58,237,0.25),
+                    circle at 10% 85%,
+                    rgba(59,130,246,0.18),
                     transparent 35%
                 ),
 
                 linear-gradient(
                     135deg,
-                    #020617,
-                    #0f172a,
-                    #172554
+                    #050505,
+                    #111111,
+                    #18130a
                 );
         }
 
@@ -218,14 +230,16 @@
             border-radius: 50%;
 
             background:
-                rgba(59,130,246,0.08);
+                rgba(245,217,139,0.07);
 
             filter:
-                blur(80px);
+                blur(90px);
 
-            top: -200px;
+            top: -250px;
 
             right: -100px;
+
+            pointer-events: none;
         }
 
 
@@ -242,7 +256,7 @@
             border-radius: 50%;
 
             background:
-                rgba(139,92,246,0.07);
+                rgba(59,130,246,0.06);
 
             filter:
                 blur(90px);
@@ -250,8 +264,14 @@
             bottom: -200px;
 
             left: -100px;
+
+            pointer-events: none;
         }
 
+
+        /* =====================================================
+           HERO
+        ===================================================== */
 
         .hero {
 
@@ -264,53 +284,65 @@
             margin: auto;
 
             padding:
-                130px 6%
+                125px 6%
                 140px;
         }
 
 
-        /* =========================================
-           MAIN BRAND NAME
-        ========================================= */
+        /* =====================================================
+           MAIN BRAND
+        ===================================================== */
 
         .brand-display {
 
             position: relative;
 
-            display: inline-block;
+            display: inline-flex;
 
-            font-size:
-                clamp(42px, 7vw, 88px);
+            align-items: baseline;
+
+            gap: 18px;
+
+            margin-bottom: 42px;
 
             font-weight: 900;
 
             line-height: 1;
 
-            letter-spacing:
-                clamp(3px, 0.7vw, 8px);
+            letter-spacing: 5px;
 
-            margin-bottom: 38px;
+            white-space: nowrap;
 
-            /* Lustrous metallic white */
+            animation:
+                brandAppear 1s ease forwards;
+        }
+
+
+        /* PRINCIPIA */
+
+        .brand-main {
+
+            font-size:
+                clamp(45px, 7vw, 90px);
 
             background:
 
                 linear-gradient(
                     180deg,
 
-                    #ffffff 0%,
+                    #fff9df 0%,
 
-                    #ffffff 20%,
+                    #f8e6a8 18%,
 
-                    #e2e8f0 42%,
+                    #d6ad4e 40%,
 
-                    #94a3b8 50%,
+                    #fff3bf 52%,
 
-                    #f8fafc 58%,
+                    #c89b3c 70%,
 
-                    #ffffff 78%,
+                    #f5d98b 86%,
 
-                    #cbd5e1 100%
+                    #a97920 100%
                 );
 
             -webkit-background-clip:
@@ -322,20 +354,38 @@
             background-clip:
                 text;
 
-            /* Glow */
-
             filter:
                 drop-shadow(
-                    0 0 12px
-                    rgba(255,255,255,0.20)
+                    0 0 8px
+                    rgba(245,217,139,0.35)
                 );
-
-            animation:
-                brandGlow 4s ease-in-out infinite;
         }
 
 
-        /* Shining line */
+        /* PRESS */
+
+        .brand-sub {
+
+            font-size:
+                clamp(30px, 4vw, 55px);
+
+            color:
+                #ffffff;
+
+            letter-spacing:
+                6px;
+
+            text-shadow:
+
+                0 0 8px
+                rgba(255,255,255,0.30),
+
+                0 0 20px
+                rgba(245,217,139,0.20);
+        }
+
+
+        /* Brand underline */
 
         .brand-display::after {
 
@@ -345,11 +395,11 @@
 
             left: 0;
 
-            bottom: -17px;
+            bottom: -20px;
 
-            width: 210px;
+            width: 280px;
 
-            height: 3px;
+            height: 4px;
 
             border-radius: 20px;
 
@@ -357,47 +407,76 @@
 
                 linear-gradient(
                     90deg,
-                    #60a5fa,
-                    #a78bfa,
+                    #a97920,
+                    #f5d98b,
+                    #ffffff,
+                    #d6ad4e,
                     transparent
                 );
 
             box-shadow:
 
-                0 0 12px
-                rgba(96,165,250,0.75),
+                0 0 10px
+                rgba(245,217,139,0.70),
 
                 0 0 25px
-                rgba(139,92,246,0.35);
+                rgba(245,217,139,0.30);
+
+            animation:
+                shineLine 3s ease-in-out infinite;
         }
 
 
-        @keyframes brandGlow {
+        @keyframes brandAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(20px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        @keyframes shineLine {
 
             0%,
             100% {
 
-                filter:
-                    drop-shadow(
-                        0 0 10px
-                        rgba(255,255,255,0.18)
-                    );
+                opacity: 0.65;
+
+                transform:
+                    scaleX(0.92);
+
+                transform-origin:
+                    left;
             }
 
             50% {
 
-                filter:
-                    drop-shadow(
-                        0 0 22px
-                        rgba(96,165,250,0.30)
-                    );
+                opacity: 1;
+
+                transform:
+                    scaleX(1);
+
+                transform-origin:
+                    left;
             }
         }
 
 
-        /* =========================================
+        /* =====================================================
            HERO LABEL
-        ========================================= */
+        ===================================================== */
 
         .hero-label {
 
@@ -406,20 +485,21 @@
             width: fit-content;
 
             padding:
-                7px 14px;
+                8px 15px;
 
-            border-radius:
-                50px;
+            margin-bottom: 26px;
+
+            border-radius: 50px;
 
             background:
-                rgba(59,130,246,0.13);
+                rgba(245,217,139,0.08);
 
             border:
                 1px solid
-                rgba(96,165,250,0.25);
+                rgba(245,217,139,0.25);
 
             color:
-                #93c5fd;
+                #f5d98b;
 
             font-size:
                 12px;
@@ -432,15 +512,12 @@
 
             text-transform:
                 uppercase;
-
-            margin-bottom:
-                25px;
         }
 
 
-        /* =========================================
+        /* =====================================================
            HERO HEADING
-        ========================================= */
+        ===================================================== */
 
         .hero h1 {
 
@@ -451,7 +528,7 @@
                 clamp(48px, 7vw, 82px);
 
             line-height:
-                1.02;
+                1.03;
 
             letter-spacing:
                 -4px;
@@ -470,8 +547,9 @@
 
                 linear-gradient(
                     90deg,
-                    #60a5fa,
-                    #a78bfa
+                    #f5d98b,
+                    #ffffff,
+                    #d6ad4e
                 );
 
             -webkit-background-clip:
@@ -484,6 +562,10 @@
                 text;
         }
 
+
+        /* =====================================================
+           HERO DESCRIPTION
+        ===================================================== */
 
         .hero p {
 
@@ -501,9 +583,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            BUTTON
-        ========================================= */
+        ===================================================== */
 
         .button {
 
@@ -520,23 +602,23 @@
 
                 linear-gradient(
                     135deg,
-                    #2563eb,
-                    #4f46e5
+                    #b88620,
+                    #f5d98b
                 );
 
             color:
-                white;
+                #111111;
 
             font-weight:
-                700;
+                800;
 
             text-decoration:
                 none;
 
             box-shadow:
 
-                0 10px 25px
-                rgba(37,99,235,0.30);
+                0 10px 30px
+                rgba(245,217,139,0.20);
 
             transition:
                 transform 0.3s ease,
@@ -551,14 +633,14 @@
 
             box-shadow:
 
-                0 16px 35px
-                rgba(37,99,235,0.40);
+                0 16px 40px
+                rgba(245,217,139,0.35);
         }
 
 
-        /* =========================================
-           SECTIONS
-        ========================================= */
+        /* =====================================================
+           GENERAL SECTIONS
+        ===================================================== */
 
         section {
 
@@ -592,9 +674,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            BOOK SECTION
-        ========================================= */
+        ===================================================== */
 
         .book-container {
 
@@ -617,7 +699,7 @@
         .book-cover {
 
             min-height:
-                440px;
+                450px;
 
             padding:
                 40px;
@@ -644,11 +726,15 @@
 
                 linear-gradient(
                     145deg,
-                    #020617,
-                    #172554,
-                    #312e81,
-                    #4f46e5
+                    #050505,
+                    #17120a,
+                    #5b4515,
+                    #1b160b
                 );
+
+            border:
+                1px solid
+                rgba(245,217,139,0.25);
 
             box-shadow:
 
@@ -673,7 +759,7 @@
             box-shadow:
 
                 0 35px 80px
-                rgba(37,99,235,0.25);
+                rgba(184,134,32,0.20);
         }
 
 
@@ -687,7 +773,7 @@
 
             border:
                 1px solid
-                rgba(255,255,255,0.25);
+                rgba(245,217,139,0.35);
 
             border-radius:
                 12px;
@@ -710,6 +796,9 @@
 
             letter-spacing:
                 2px;
+
+            color:
+                #f5d98b;
         }
 
 
@@ -723,10 +812,15 @@
 
             margin:
                 28px 0;
+
+            color:
+                #ffffff;
         }
 
 
-        /* BOOK DETAILS */
+        /* =====================================================
+           BOOK DETAILS
+        ===================================================== */
 
         .book-card {
 
@@ -769,7 +863,7 @@
         .book-category {
 
             color:
-                #2563eb;
+                #b88620;
 
             font-size:
                 12px;
@@ -833,9 +927,9 @@
         }
 
 
-        /* =========================================
-           AREAS WE COVER
-        ========================================= */
+        /* =====================================================
+           CATEGORIES
+        ===================================================== */
 
         .categories {
 
@@ -889,12 +983,12 @@
                 translateY(-8px);
 
             border-color:
-                #93c5fd;
+                #d6ad4e;
 
             box-shadow:
 
                 0 20px 45px
-                rgba(37,99,235,0.10);
+                rgba(184,134,32,0.10);
         }
 
 
@@ -917,9 +1011,9 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            ABOUT PREVIEW
-        ========================================= */
+        ===================================================== */
 
         .about-preview {
 
@@ -941,14 +1035,14 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            CTA
-        ========================================= */
+        ===================================================== */
 
         .cta {
 
             padding:
-                55px;
+                60px;
 
             border-radius:
                 20px;
@@ -957,13 +1051,17 @@
 
                 linear-gradient(
                     135deg,
-                    #020617,
-                    #1e3a8a,
-                    #312e81
+                    #080808,
+                    #241d0b,
+                    #3b2c0e
                 );
 
             color:
                 white;
+
+            border:
+                1px solid
+                rgba(245,217,139,0.18);
 
             box-shadow:
 
@@ -979,6 +1077,9 @@
 
             margin-bottom:
                 15px;
+
+            color:
+                #f5d98b;
         }
 
 
@@ -998,10 +1099,10 @@
         .cta .button {
 
             background:
-                #ffffff;
+                #f5d98b;
 
             color:
-                #1e3a8a;
+                #111111;
 
             box-shadow:
                 none;
@@ -1011,18 +1112,18 @@
         .cta .button:hover {
 
             background:
-                #eff6ff;
+                #ffffff;
         }
 
 
-        /* =========================================
+        /* =====================================================
            FOOTER
-        ========================================= */
+        ===================================================== */
 
         footer {
 
             background:
-                #020617;
+                #050505;
 
             color:
                 #94a3b8;
@@ -1044,6 +1145,10 @@
 
             gap:
                 20px;
+
+            border-top:
+                1px solid
+                rgba(245,217,139,0.15);
         }
 
 
@@ -1066,13 +1171,13 @@
         footer a:hover {
 
             color:
-                #ffffff;
+                #f5d98b;
         }
 
 
-        /* =========================================
+        /* =====================================================
            TABLET
-        ========================================= */
+        ===================================================== */
 
         @media (max-width: 900px) {
 
@@ -1086,7 +1191,7 @@
             .categories {
 
                 grid-template-columns:
-                    repeat(2,1fr);
+                    repeat(2, 1fr);
             }
 
 
@@ -1102,11 +1207,11 @@
         }
 
 
-        /* =========================================
+        /* =====================================================
            MOBILE
-        ========================================= */
+        ===================================================== */
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
 
             header {
 
@@ -1121,27 +1226,27 @@
             .logo {
 
                 width:
-                    120px;
+                    115px;
 
                 height:
-                    40px;
+                    42px;
             }
 
 
             .logo img {
 
                 width:
-                    120px;
+                    115px;
 
                 height:
-                    40px;
+                    42px;
             }
 
 
             nav {
 
                 gap:
-                    12px;
+                    15px;
             }
 
 
@@ -1156,24 +1261,56 @@
 
                 padding:
                     90px 5%
-                    90px;
+                    100px;
             }
 
 
             .brand-display {
 
-                font-size:
-                    39px;
+                display:
+                    flex;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    4px;
+
+                white-space:
+                    normal;
 
                 letter-spacing:
                     3px;
+
+                margin-bottom:
+                    42px;
+            }
+
+
+            .brand-main {
+
+                font-size:
+                    45px;
+            }
+
+
+            .brand-sub {
+
+                font-size:
+                    32px;
+
+                letter-spacing:
+                    5px;
             }
 
 
             .brand-display::after {
 
                 width:
-                    150px;
+                    180px;
             }
 
 
@@ -1282,17 +1419,18 @@
 <body>
 
 
-<!-- =========================================
+<!-- =====================================================
      HEADER
-========================================= -->
+===================================================== -->
 
 <header>
+
 
     <div class="logo">
 
         <img
             src="pp.png"
-            alt="Principia Press"
+            alt="Principia Press Logo"
         >
 
     </div>
@@ -1314,15 +1452,17 @@
 
     </nav>
 
+
 </header>
 
 
 
-<!-- =========================================
+<!-- =====================================================
      HERO
-========================================= -->
+===================================================== -->
 
 <div class="hero-wrapper">
+
 
     <section
         class="hero"
@@ -1334,10 +1474,18 @@
 
         <div class="brand-display">
 
-            PRINCIPIA PRESS
+            <span class="brand-main">
+                PRINCIPIA
+            </span>
+
+            <span class="brand-sub">
+                PRESS
+            </span>
 
         </div>
 
+
+        <!-- LABEL -->
 
         <div class="hero-label">
 
@@ -1345,6 +1493,8 @@
 
         </div>
 
+
+        <!-- HEADLINE -->
 
         <h1>
 
@@ -1359,6 +1509,8 @@
         </h1>
 
 
+        <!-- DESCRIPTION -->
+
         <p>
 
             Practical technical resources
@@ -1367,6 +1519,8 @@
 
         </p>
 
+
+        <!-- BUTTON -->
 
         <a
             href="#books"
@@ -1384,9 +1538,9 @@
 
 
 
-<!-- =========================================
-     E-BOOKS
-========================================= -->
+<!-- =====================================================
+     E-BOOK SECTION
+===================================================== -->
 
 <section id="books">
 
@@ -1404,6 +1558,7 @@
         <!-- BOOK COVER -->
 
         <div class="book-cover">
+
 
             <div class="book-cover-content">
 
@@ -1438,6 +1593,7 @@
 
 
             </div>
+
 
         </div>
 
@@ -1479,16 +1635,11 @@
             </div>
 
 
-            <!--
-                PAYMENT LINK WILL GO HERE
+            <!-- =================================================
+                 PAYMENT BUTTON
 
-                Example:
-
-                <a href="YOUR-RAZORPAY-LINK"
-                   class="button">
-                   Buy Now
-                </a>
-            -->
+                 REPLACE "#" WITH YOUR PAYMENT LINK
+            ================================================== -->
 
             <a
                 href="#"
@@ -1502,15 +1653,17 @@
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
 
-<!-- =========================================
+<!-- =====================================================
      AREAS WE COVER
-========================================= -->
+===================================================== -->
 
 <section>
 
@@ -1579,13 +1732,14 @@
 
     </div>
 
+
 </section>
 
 
 
-<!-- =========================================
+<!-- =====================================================
      ABOUT PREVIEW
-========================================= -->
+===================================================== -->
 
 <section>
 
@@ -1612,8 +1766,7 @@
 
         <p>
 
-            We create technical e-books and
-            learning resources covering Electronics,
+            Our resources cover Electronics,
             Digital Design, VLSI, FPGA,
             Verilog HDL and RTL Design.
 
@@ -1632,13 +1785,14 @@
 
     </div>
 
+
 </section>
 
 
 
-<!-- =========================================
+<!-- =====================================================
      CTA
-========================================= -->
+===================================================== -->
 
 <section>
 
@@ -1674,13 +1828,14 @@
 
     </div>
 
+
 </section>
 
 
 
-<!-- =========================================
+<!-- =====================================================
      FOOTER
-========================================= -->
+===================================================== -->
 
 <footer>
 
@@ -1695,16 +1850,12 @@
     <div>
 
         <a href="privacy.html">
-
             Privacy Policy
-
         </a>
 
 
         <a href="contact.html">
-
             Contact
-
         </a>
 
     </div>
