@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>About | Principia Press</title>
+
+    <meta
+        name="description"
+        content="Learn more about Principia Press and our approach to technical publishing."
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 80% 10%,
+                    rgba(37,99,235,0.12),
+                    transparent 35%
+                ),
+                #f8fafc;
+
+            color: #111827;
+
+            line-height: 1.6;
+        }
+
+
+        /* HEADER */
+
+        header {
+
+            height: 80px;
+
+            padding: 0 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(255,255,255,0.90);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #e5e7eb;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            width: 200px;
+
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+        }
+
+        .logo img {
+
+            width: 200px;
+
+            height: 55px;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+
+            display: flex;
+
+            gap: 45px;
+        }
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #374151;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+
+            color: #2563eb;
+        }
+
+
+        /* HERO */
+
+        .hero {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding:
+                110px 6%
+                80px;
+        }
+
+        .label {
+
+            display: inline-block;
+
+            padding:
+                7px 14px;
+
+            border-radius: 50px;
+
+            background: #dbeafe;
+
+            color: #2563eb;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        h1 {
+
+            font-size:
+                clamp(48px, 7vw, 78px);
+
+            line-height: 1.05;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 30px;
+        }
+
+        h1 span {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #2563eb,
+                    #7c3aed
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+        .intro {
+
+            max-width: 750px;
+
+            font-size: 20px;
+
+            color: #64748b;
+        }
+
+
+        /* CONTENT */
+
+        .content {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding:
+                50px 6%
+                110px;
+        }
+
+        .content h2 {
+
+            font-size: 38px;
+
+            margin-bottom: 20px;
+
+            color: #0f172a;
+        }
+
+        .content p {
+
+            max-width: 850px;
+
+            font-size: 18px;
+
+            color: #64748b;
+
+            margin-bottom: 22px;
+        }
+
+
+        /* CARDS */
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            margin-top: 50px;
+        }
+
+        .card {
+
+            background: white;
+
+            border:
+                1px solid #e2e8f0;
+
+            border-radius: 16px;
+
+            padding: 32px;
+
+            transition: 0.35s;
+
+            box-shadow:
+                0 10px 30px
+                rgba(15,23,42,0.05);
+        }
+
+        .card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 20px 45px
+                rgba(37,99,235,0.10);
+
+            border-color:
+                #bfdbfe;
+        }
+
+        .card h3 {
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+
+            color: #111827;
+        }
+
+        .card p {
+
+            font-size: 16px;
+
+            margin: 0;
+        }
+
+
+        /* MISSION */
+
+        .mission {
+
+            margin-top: 70px;
+
+            padding: 45px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #1e3a8a
+                );
+
+            color: white;
+
+            box-shadow:
+                0 25px 55px
+                rgba(15,23,42,0.20);
+        }
+
+        .mission h2 {
+
+            color: white;
+
+            margin-bottom: 15px;
+        }
+
+        .mission p {
+
+            color: #cbd5e1;
+
+            margin: 0;
+
+            max-width: 800px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            background: #0f172a;
+
+            color: #94a3b8;
+
+            padding:
+                40px 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+        footer a {
+
+            color: #cbd5e1;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+        }
+
+        footer a:hover {
+
+            color: white;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .cards {
+
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+
+                gap: 15px;
+            }
+
+            nav a {
+
+                font-size: 13px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+
+                height: 70px;
+
+                padding: 0 5%;
+            }
+
+            .logo {
+
+                width: 120px;
+
+                height: 40px;
+            }
+
+            .logo img {
+
+                width: 120px;
+
+                height: 40px;
+            }
+
+            nav {
+
+                gap: 12px;
+            }
+
+            nav a {
+
+                font-size: 12px;
+            }
+
+            .hero {
+
+                padding:
+                    80px 5%
+                    60px;
+            }
+
+            .content {
+
+                padding:
+                    40px 5%
+                    80px;
+            }
+
+            .mission {
+
+                padding: 30px;
+            }
+
+            footer {
+
+                padding: 30px 5%;
+
+                flex-direction: column;
+            }
+
+            footer a {
+
+                margin-left: 0;
+
+                margin-right: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+
+        <img
+            src="pp.png"
+            alt="Principia Press"
+        >
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#books">
+            E-Books
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="label">
+        About Principia Press
+    </div>
+
+    <h1>
+
+        Engineering knowledge.
+        <br>
+
+        <span>Clearly organized.</span>
+
+    </h1>
+
+    <p class="intro">
+
+        Principia Press is an independent
+        technical publishing initiative focused
+        on making engineering knowledge
+        practical, accessible and clearly written.
+
+    </p>
+
+</section>
+
+
+<!-- CONTENT -->
+
+<section class="content">
+
+
+    <h2>
+        What is Principia Press?
+    </h2>
+
+    <p>
+
+        Principia Press creates technical
+        e-books and learning resources for
+        students, engineers, developers and
+        technology enthusiasts.
+
+    </p>
+
+    <p>
+
+        Our focus is on presenting complex
+        engineering concepts in a structured
+        and practical format that makes them
+        easier to study, revise and apply.
+
+    </p>
+
+
+    <!-- CARDS -->
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>
+                Practical
+            </h3>
+
+            <p>
+
+                Resources are designed to connect
+                theoretical concepts with practical
+                engineering applications.
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Structured
+            </h3>
+
+            <p>
+
+                Technical topics are organized
+                clearly so readers can learn,
+                revise and reference them efficiently.
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Technical
+            </h3>
+
+            <p>
+
+                Our publishing focus includes
+                Electronics, Digital Design,
+                VLSI, FPGA, Verilog HDL and RTL.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- MISSION -->
+
+    <div class="mission">
+
+        <h2>
+            Our Mission
+        </h2>
+
+        <p>
+
+            To make technical knowledge easier
+            to understand, easier to access and
+            more useful for real engineering
+            learning and development.
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div>
+
+        © 2026 Principia Press
+
+    </div>
+
+
+    <div>
+
+        <a href="privacy.html">
+            Privacy Policy
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
