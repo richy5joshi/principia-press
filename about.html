@@ -5,19 +5,34 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>About | Principia Press</title>
 
     <meta
         name="description"
-        content="Learn more about Principia Press and our approach to technical publishing."
+        content="Learn about Principia Press, an independent technical publishing initiative focused on Electronics, VLSI, FPGA, Verilog HDL and digital design."
     >
 
+
     <style>
+
+        /* =====================================================
+           PRINCIPIA PRESS
+           MASTER COLOR SYSTEM
+
+           Black      #050505
+           Dark       #111111
+           Wheat Gold #F5D98B
+           Deep Gold  #C89B3C
+           White      #FFFFFF
+           Soft White #CBD5E1
+        ===================================================== */
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
 
         * {
             margin: 0;
@@ -25,40 +40,45 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
 
-            background:
-                radial-gradient(
-                    circle at 80% 10%,
-                    rgba(37,99,235,0.12),
-                    transparent 35%
-                ),
-                #f8fafc;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-            color: #111827;
+            background: #050505;
+
+            color: #ffffff;
 
             line-height: 1.6;
+
+            overflow-x: hidden;
         }
 
 
-        /* HEADER */
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
 
         header {
 
-            height: 80px;
+            height: 82px;
 
             padding: 0 6%;
 
             display: flex;
 
-            justify-content: space-between;
-
             align-items: center;
+
+            justify-content: space-between;
 
             position: sticky;
 
@@ -67,33 +87,49 @@
             z-index: 1000;
 
             background:
-                rgba(255,255,255,0.90);
+                rgba(5, 5, 5, 0.94);
 
-            backdrop-filter: blur(12px);
+            backdrop-filter:
+                blur(15px);
 
             border-bottom:
-                1px solid #e5e7eb;
+                1px solid
+                rgba(245, 217, 139, 0.15);
         }
 
 
-        /* LOGO */
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
 
         .logo {
 
-            width: 200px;
+            width: 190px;
 
-            height: 55px;
+            height: 60px;
 
             display: flex;
 
             align-items: center;
         }
 
+
+        .logo a {
+
+            display: flex;
+
+            align-items: center;
+
+            text-decoration: none;
+        }
+
+
         .logo img {
 
-            width: 200px;
+            width: 190px;
 
-            height: 55px;
+            height: 60px;
 
             object-fit: contain;
 
@@ -101,365 +137,1112 @@
         }
 
 
-        /* NAVIGATION */
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
 
         nav {
 
             display: flex;
 
-            gap: 45px;
+            align-items: center;
+
+            gap: 42px;
         }
+
 
         nav a {
 
-            text-decoration: none;
+            position: relative;
 
-            color: #374151;
+            color: #ffffff;
+
+            text-decoration: none;
 
             font-size: 15px;
 
             font-weight: 600;
 
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-
-            color: #2563eb;
+            transition:
+                color 0.3s ease;
         }
 
 
-        /* HERO */
+        nav a::after {
 
-        .hero {
+            content: "";
 
-            max-width: 1100px;
+            position: absolute;
 
-            margin: auto;
+            left: 0;
 
-            padding:
-                110px 6%
-                80px;
-        }
+            bottom: -9px;
 
-        .label {
+            width: 0;
 
-            display: inline-block;
-
-            padding:
-                7px 14px;
-
-            border-radius: 50px;
-
-            background: #dbeafe;
-
-            color: #2563eb;
-
-            font-size: 12px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 25px;
-        }
-
-        h1 {
-
-            font-size:
-                clamp(48px, 7vw, 78px);
-
-            line-height: 1.05;
-
-            letter-spacing: -3px;
-
-            margin-bottom: 30px;
-        }
-
-        h1 span {
+            height: 2px;
 
             background:
                 linear-gradient(
                     90deg,
-                    #2563eb,
-                    #7c3aed
+                    #c89b3c,
+                    #f5d98b
                 );
 
-            -webkit-background-clip: text;
-
-            -webkit-text-fill-color: transparent;
-        }
-
-        .intro {
-
-            max-width: 750px;
-
-            font-size: 20px;
-
-            color: #64748b;
+            transition:
+                width 0.3s ease;
         }
 
 
-        /* CONTENT */
+        nav a:hover {
 
-        .content {
+            color: #f5d98b;
+        }
+
+
+        nav a:hover::after {
+
+            width: 100%;
+        }
+
+
+        nav .active {
+
+            color: #f5d98b;
+        }
+
+
+        nav .active::after {
+
+            width: 100%;
+        }
+
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 620px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding:
+                110px 6%
+                100px;
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(245, 217, 139, 0.14),
+                    transparent 32%
+                ),
+
+                radial-gradient(
+                    circle at 15% 80%,
+                    rgba(200, 155, 60, 0.08),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #050505,
+                    #111111,
+                    #18130a
+                );
+        }
+
+
+        /* Decorative glow */
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+
+            height: 450px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(245, 217, 139, 0.10);
+
+            right: -150px;
+
+            top: -150px;
+
+            animation:
+                floatGlow 8s ease-in-out infinite;
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+
+            height: 300px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(245, 217, 139, 0.07);
+
+            left: -130px;
+
+            bottom: -130px;
+
+            animation:
+                floatGlow 10s ease-in-out infinite reverse;
+        }
+
+
+        @keyframes floatGlow {
+
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+
+        .hero-content {
 
             max-width: 1100px;
 
             margin: auto;
 
+            width: 100%;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .hero-label {
+
+            display: inline-block;
+
             padding:
-                50px 6%
-                110px;
-        }
+                8px 16px;
 
-        .content h2 {
-
-            font-size: 38px;
-
-            margin-bottom: 20px;
-
-            color: #0f172a;
-        }
-
-        .content p {
-
-            max-width: 850px;
-
-            font-size: 18px;
-
-            color: #64748b;
-
-            margin-bottom: 22px;
-        }
-
-
-        /* CARDS */
-
-        .cards {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 20px;
-
-            margin-top: 50px;
-        }
-
-        .card {
-
-            background: white;
+            margin-bottom:
+                28px;
 
             border:
-                1px solid #e2e8f0;
+                1px solid
+                rgba(245, 217, 139, 0.25);
 
-            border-radius: 16px;
-
-            padding: 32px;
-
-            transition: 0.35s;
-
-            box-shadow:
-                0 10px 30px
-                rgba(15,23,42,0.05);
-        }
-
-        .card:hover {
-
-            transform:
-                translateY(-7px);
-
-            box-shadow:
-                0 20px 45px
-                rgba(37,99,235,0.10);
-
-            border-color:
-                #bfdbfe;
-        }
-
-        .card h3 {
-
-            font-size: 21px;
-
-            margin-bottom: 12px;
-
-            color: #111827;
-        }
-
-        .card p {
-
-            font-size: 16px;
-
-            margin: 0;
-        }
-
-
-        /* MISSION */
-
-        .mission {
-
-            margin-top: 70px;
-
-            padding: 45px;
-
-            border-radius: 18px;
+            border-radius:
+                50px;
 
             background:
+                rgba(245, 217, 139, 0.06);
+
+            color:
+                #f5d98b;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                3px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(48px, 7vw, 82px);
+
+            line-height:
+                1.02;
+
+            letter-spacing:
+                -3px;
+
+            margin-bottom:
+                30px;
+        }
+
+
+        .hero h1 span {
+
+            background:
+
                 linear-gradient(
-                    135deg,
-                    #111827,
-                    #1e3a8a
+                    90deg,
+                    #f5d98b,
+                    #ffffff,
+                    #d6ad4e
                 );
 
-            color: white;
+            -webkit-background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            background-clip:
+                text;
+        }
+
+
+        .hero p {
+
+            max-width:
+                720px;
+
+            font-size:
+                20px;
+
+            color:
+                #cbd5e1;
+        }
+
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ===================================================== */
+
+        .content {
+
+            max-width:
+                1100px;
+
+            margin:
+                auto;
+
+            padding:
+                100px 6%;
+        }
+
+
+        .section {
+
+            margin-bottom:
+                120px;
+        }
+
+
+        .section-label {
+
+            color:
+                #f5d98b;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                3px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .section h2 {
+
+            font-size:
+                clamp(34px, 5vw, 50px);
+
+            line-height:
+                1.1;
+
+            letter-spacing:
+                -1.5px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .section h2 span {
+
+            color:
+                #f5d98b;
+        }
+
+
+        .section p {
+
+            max-width:
+                820px;
+
+            font-size:
+                18px;
+
+            color:
+                #cbd5e1;
+
+            margin-bottom:
+                20px;
+        }
+
+
+
+        /* =====================================================
+           GOLD DIVIDER
+        ===================================================== */
+
+        .gold-line {
+
+            width:
+                80px;
+
+            height:
+                3px;
+
+            margin:
+                30px 0;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #c89b3c,
+                    #f5d98b
+                );
+        }
+
+
+
+        /* =====================================================
+           MISSION BOX
+        ===================================================== */
+
+        .mission-box {
+
+            padding:
+                50px;
+
+            border:
+                1px solid
+                rgba(245, 217, 139, 0.18);
+
+            border-radius:
+                18px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0.025),
+                    rgba(245,217,139,0.035)
+                );
 
             box-shadow:
-                0 25px 55px
-                rgba(15,23,42,0.20);
-        }
+                0 20px 60px
+                rgba(0,0,0,0.25);
 
-        .mission h2 {
+            position:
+                relative;
 
-            color: white;
-
-            margin-bottom: 15px;
-        }
-
-        .mission p {
-
-            color: #cbd5e1;
-
-            margin: 0;
-
-            max-width: 800px;
+            overflow:
+                hidden;
         }
 
 
-        /* FOOTER */
+        .mission-box::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            width: 4px;
+
+            height: 100%;
+
+            background:
+
+                linear-gradient(
+                    #c89b3c,
+                    #f5d98b
+                );
+        }
+
+
+        .mission-box h3 {
+
+            font-size:
+                30px;
+
+            color:
+                #f5d98b;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .mission-box p {
+
+            font-size:
+                19px;
+
+            max-width:
+                800px;
+
+            color:
+                #e2e8f0;
+        }
+
+
+
+        /* =====================================================
+           PUBLISHING AREAS
+        ===================================================== */
+
+        .areas-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                18px;
+
+            margin-top:
+                40px;
+        }
+
+
+        .area {
+
+            padding:
+                30px;
+
+            border:
+                1px solid
+                rgba(245, 217, 139, 0.15);
+
+            background:
+                #0d0d0d;
+
+            border-radius:
+                12px;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+        }
+
+
+        .area:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(245, 217, 139, 0.45);
+
+            background:
+                #131109;
+        }
+
+
+        .area-number {
+
+            color:
+                #c89b3c;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                10px;
+
+            letter-spacing:
+                2px;
+        }
+
+
+        .area h3 {
+
+            font-size:
+                23px;
+
+            margin-bottom:
+                8px;
+
+            color:
+                #ffffff;
+        }
+
+
+        .area p {
+
+            font-size:
+                15px;
+
+            color:
+                #94a3b8;
+
+            margin:
+                0;
+        }
+
+
+
+        /* =====================================================
+           APPROACH
+        ===================================================== */
+
+        .approach-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap:
+                15px;
+
+            margin-top:
+                40px;
+        }
+
+
+        .approach {
+
+            padding:
+                28px 20px;
+
+            border-top:
+                1px solid
+                rgba(245,217,139,0.25);
+
+            border-bottom:
+                1px solid
+                rgba(245,217,139,0.10);
+
+            transition:
+                border-color 0.3s ease;
+        }
+
+
+        .approach:hover {
+
+            border-top-color:
+                #f5d98b;
+        }
+
+
+        .approach h3 {
+
+            color:
+                #f5d98b;
+
+            font-size:
+                17px;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        .approach p {
+
+            font-size:
+                14px;
+
+            color:
+                #94a3b8;
+
+            margin:
+                0;
+        }
+
+
+
+        /* =====================================================
+           BRAND STATEMENT
+        ===================================================== */
+
+        .brand-statement {
+
+            text-align:
+                center;
+
+            padding:
+                100px 30px;
+
+            margin-bottom:
+                110px;
+
+            border-top:
+                1px solid
+                rgba(245,217,139,0.12);
+
+            border-bottom:
+                1px solid
+                rgba(245,217,139,0.12);
+
+            background:
+
+                radial-gradient(
+                    circle,
+                    rgba(245,217,139,0.06),
+                    transparent 65%
+                );
+        }
+
+
+        .brand-statement small {
+
+            display:
+                block;
+
+            color:
+                #c89b3c;
+
+            letter-spacing:
+                4px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                20px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .brand-statement h2 {
+
+            font-size:
+                clamp(38px, 7vw, 75px);
+
+            line-height:
+                1;
+
+            letter-spacing:
+                -3px;
+        }
+
+
+        .brand-statement h2 span {
+
+            display:
+                block;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #c89b3c,
+                    #f5d98b,
+                    #ffffff,
+                    #d6ad4e
+                );
+
+            -webkit-background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            background-clip:
+                text;
+        }
+
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+
+            text-align:
+                center;
+
+            padding:
+                70px 40px;
+
+            border:
+                1px solid
+                rgba(245,217,139,0.18);
+
+            border-radius:
+                20px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #0a0a0a,
+                    #1d1708,
+                    #0a0a0a
+                );
+        }
+
+
+        .cta h2 {
+
+            font-size:
+                40px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .cta h2 span {
+
+            color:
+                #f5d98b;
+        }
+
+
+        .cta p {
+
+            max-width:
+                650px;
+
+            margin:
+                0 auto 30px;
+
+            color:
+                #cbd5e1;
+
+            font-size:
+                17px;
+        }
+
+
+        .button {
+
+            display:
+                inline-block;
+
+            padding:
+                14px 28px;
+
+            border-radius:
+                7px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #c89b3c,
+                    #f5d98b
+                );
+
+            color:
+                #111111;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                800;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .button:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(245,217,139,0.25);
+        }
+
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
         footer {
-
-            background: #0f172a;
-
-            color: #94a3b8;
 
             padding:
                 40px 6%;
 
-            display: flex;
+            background:
+                #030303;
 
-            justify-content: space-between;
+            border-top:
+                1px solid
+                rgba(245,217,139,0.15);
 
-            flex-wrap: wrap;
+            display:
+                flex;
 
-            gap: 20px;
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                20px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                14px;
         }
+
 
         footer a {
 
-            color: #cbd5e1;
+            color:
+                #cbd5e1;
 
-            text-decoration: none;
+            text-decoration:
+                none;
 
-            margin-left: 25px;
+            margin-left:
+                25px;
+
+            transition:
+                color 0.3s ease;
         }
+
 
         footer a:hover {
 
-            color: white;
+            color:
+                #f5d98b;
         }
 
 
-        /* MOBILE */
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
 
         @media (max-width: 800px) {
 
-            .cards {
-
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-
-                gap: 15px;
-            }
-
-            nav a {
-
-                font-size: 13px;
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
             header {
 
-                height: 70px;
-
-                padding: 0 5%;
+                padding:
+                    0 5%;
             }
+
 
             .logo {
 
-                width: 120px;
+                width:
+                    125px;
 
-                height: 40px;
+                height:
+                    50px;
             }
+
 
             .logo img {
 
-                width: 120px;
+                width:
+                    125px;
 
-                height: 40px;
+                height:
+                    50px;
             }
+
 
             nav {
 
-                gap: 12px;
+                gap:
+                    15px;
             }
+
 
             nav a {
 
-                font-size: 12px;
+                font-size:
+                    12px;
             }
+
 
             .hero {
 
+                min-height:
+                    540px;
+
                 padding:
-                    80px 5%
-                    60px;
+                    90px 5%;
             }
+
+
+            .hero h1 {
+
+                font-size:
+                    50px;
+
+                letter-spacing:
+                    -2px;
+            }
+
+
+            .hero p {
+
+                font-size:
+                    17px;
+            }
+
 
             .content {
 
                 padding:
-                    40px 5%
+                    70px 5%;
+            }
+
+
+            .section {
+
+                margin-bottom:
                     80px;
             }
 
-            .mission {
 
-                padding: 30px;
+            .mission-box {
+
+                padding:
+                    35px 30px;
             }
+
+
+            .areas-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .approach-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .brand-statement {
+
+                padding:
+                    75px 20px;
+            }
+
+
+            .cta {
+
+                padding:
+                    50px 25px;
+            }
+
 
             footer {
 
-                padding: 30px 5%;
+                padding:
+                    30px 5%;
 
-                flex-direction: column;
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
             }
+
 
             footer a {
 
-                margin-left: 0;
+                margin-left:
+                    0;
 
-                margin-right: 18px;
+                margin-right:
+                    18px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .approach-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            nav {
+
+                gap:
+                    10px;
+            }
+
+
+            nav a {
+
+                font-size:
+                    11px;
             }
 
         }
@@ -472,16 +1255,23 @@
 <body>
 
 
-<!-- HEADER -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
+
     <div class="logo">
 
-        <img
-            src="pp.png"
-            alt="Principia Press"
-        >
+        <a href="index.html">
+
+            <img
+                src="pp.png"
+                alt="Principia Press"
+            >
+
+        </a>
 
     </div>
 
@@ -492,151 +1282,65 @@
             Home
         </a>
 
-        <a href="index.html#books">
+        <a href="ebooks.html">
             E-Books
         </a>
 
-        <a href="about.html">
+        <a
+            href="about.html"
+            class="active"
+        >
             About
+        </a>
+
+        <a href="contact.html">
+            Contact
         </a>
 
     </nav>
 
+
 </header>
 
 
-<!-- HERO -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-    <div class="label">
-        About Principia Press
-    </div>
 
-    <h1>
-
-        Engineering knowledge.
-        <br>
-
-        <span>Clearly organized.</span>
-
-    </h1>
-
-    <p class="intro">
-
-        Principia Press is an independent
-        technical publishing initiative focused
-        on making engineering knowledge
-        practical, accessible and clearly written.
-
-    </p>
-
-</section>
+    <div class="hero-content">
 
 
-<!-- CONTENT -->
+        <div class="hero-label">
 
-<section class="content">
-
-
-    <h2>
-        What is Principia Press?
-    </h2>
-
-    <p>
-
-        Principia Press creates technical
-        e-books and learning resources for
-        students, engineers, developers and
-        technology enthusiasts.
-
-    </p>
-
-    <p>
-
-        Our focus is on presenting complex
-        engineering concepts in a structured
-        and practical format that makes them
-        easier to study, revise and apply.
-
-    </p>
-
-
-    <!-- CARDS -->
-
-    <div class="cards">
-
-
-        <div class="card">
-
-            <h3>
-                Practical
-            </h3>
-
-            <p>
-
-                Resources are designed to connect
-                theoretical concepts with practical
-                engineering applications.
-
-            </p>
+            About Principia Press
 
         </div>
 
 
-        <div class="card">
+        <h1>
 
-            <h3>
-                Structured
-            </h3>
+            Engineering knowledge.
 
-            <p>
+            <br>
 
-                Technical topics are organized
-                clearly so readers can learn,
-                revise and reference them efficiently.
+            <span>Clearly written.</span>
 
-            </p>
+        </h1>
 
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                Technical
-            </h3>
-
-            <p>
-
-                Our publishing focus includes
-                Electronics, Digital Design,
-                VLSI, FPGA, Verilog HDL and RTL.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-    <!-- MISSION -->
-
-    <div class="mission">
-
-        <h2>
-            Our Mission
-        </h2>
 
         <p>
 
-            To make technical knowledge easier
-            to understand, easier to access and
-            more useful for real engineering
-            learning and development.
+            Principia Press is an independent technical
+            publishing initiative focused on making
+            engineering knowledge practical, accessible
+            and clearly organized.
 
         </p>
+
 
     </div>
 
@@ -644,9 +1348,449 @@
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="content">
+
+
+
+    <!-- =================================================
+         WHO WE ARE
+    ================================================== -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            Who We Are
+
+        </div>
+
+
+        <h2>
+
+            Building a place for
+            <span>technical knowledge.</span>
+
+        </h2>
+
+
+        <div class="gold-line"></div>
+
+
+        <p>
+
+            Principia Press is an independent technical
+            publishing initiative dedicated to creating
+            clear and practical engineering resources.
+
+        </p>
+
+
+        <p>
+
+            Our focus is on organizing technical concepts
+            in a way that makes them easier to understand,
+            revise and apply.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         MISSION
+    ================================================== -->
+
+    <section class="section">
+
+
+        <div class="mission-box">
+
+
+            <h3>
+
+                Our Mission
+
+            </h3>
+
+
+            <p>
+
+                To make engineering knowledge practical,
+                accessible and clearly organized through
+                thoughtfully written technical resources.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         WHAT WE PUBLISH
+    ================================================== -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            What We Publish
+
+        </div>
+
+
+        <h2>
+
+            Focused on
+            <span>engineering.</span>
+
+        </h2>
+
+
+        <p>
+
+            Our resources cover foundational and
+            implementation-oriented topics across
+            Electronics and VLSI.
+
+        </p>
+
+
+        <div class="areas-grid">
+
+
+            <div class="area">
+
+
+                <div class="area-number">
+
+                    01
+
+                </div>
+
+
+                <h3>
+
+                    Digital Electronics
+
+                </h3>
+
+
+                <p>
+
+                    Digital logic, circuits and
+                    fundamental concepts.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="area">
+
+
+                <div class="area-number">
+
+                    02
+
+                </div>
+
+
+                <h3>
+
+                    VLSI
+
+                </h3>
+
+
+                <p>
+
+                    Concepts related to integrated
+                    circuit design and VLSI systems.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="area">
+
+
+                <div class="area-number">
+
+                    03
+
+                </div>
+
+
+                <h3>
+
+                    FPGA
+
+                </h3>
+
+
+                <p>
+
+                    FPGA design, implementation and
+                    prototyping concepts.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="area">
+
+
+                <div class="area-number">
+
+                    04
+
+                </div>
+
+
+                <h3>
+
+                    Verilog HDL
+
+                </h3>
+
+
+                <p>
+
+                    HDL concepts, RTL design and
+                    practical digital design.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         OUR APPROACH
+    ================================================== -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            Our Approach
+
+        </div>
+
+
+        <h2>
+
+            Simple principles.
+            <span>Better learning.</span>
+
+        </h2>
+
+
+        <div class="approach-grid">
+
+
+            <div class="approach">
+
+
+                <h3>
+
+                    Clear
+
+                </h3>
+
+
+                <p>
+
+                    Complex concepts presented
+                    in an understandable structure.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="approach">
+
+
+                <h3>
+
+                    Practical
+
+                </h3>
+
+
+                <p>
+
+                    Focus on concepts that can
+                    be applied to real engineering work.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="approach">
+
+
+                <h3>
+
+                    Structured
+
+                </h3>
+
+
+                <p>
+
+                    Information organized for
+                    learning, revision and reference.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="approach">
+
+
+                <h3>
+
+                    Accessible
+
+                </h3>
+
+
+                <p>
+
+                    Technical resources designed
+                    to remain affordable and accessible.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         BRAND STATEMENT
+    ================================================== -->
+
+    <section class="brand-statement">
+
+
+        <small>
+
+            The Principia Press Philosophy
+
+        </small>
+
+
+        <h2>
+
+            Technical Knowledge.
+
+            <span>
+
+                Clearly Written.
+
+            </span>
+
+        </h2>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CTA
+    ================================================== -->
+
+    <section class="cta">
+
+
+        <h2>
+
+            Explore our
+            <span>E-Books.</span>
+
+        </h2>
+
+
+        <p>
+
+            Discover practical technical resources
+            covering Electronics, VLSI, FPGA,
+            Verilog HDL and digital design.
+
+        </p>
+
+
+        <a
+            href="ebooks.html"
+            class="button"
+        >
+
+            Explore E-Books
+
+        </a>
+
+
+    </section>
+
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
+
 
     <div>
 
@@ -657,15 +1801,36 @@
 
     <div>
 
-        <a href="privacy.html">
-            Privacy Policy
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="ebooks.html">
+            E-Books
+        </a>
+
+        <a href="about.html">
+            About
         </a>
 
         <a href="contact.html">
             Contact
         </a>
 
+        <a href="privacy.html">
+            Privacy Policy
+        </a>
+
+        <a href="terms.html">
+            Terms & Conditions
+        </a>
+
+        <a href="refund.html">
+            Refund Policy
+        </a>
+
     </div>
+
 
 </footer>
 
