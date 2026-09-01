@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Principia Press</title>
+
+    <meta
+        name="description"
+        content="Contact Principia Press for e-book enquiries, purchase support, digital delivery assistance and general enquiries."
+    >
+
+    <style>
+
+        /* =====================================================
+           PRINCIPIA PRESS
+           MASTER COLOR SYSTEM
+
+           Background   #050505
+           Dark         #111111
+           Wheat Gold   #F5D98B
+           Deep Gold    #C89B3C
+           White        #FFFFFF
+           Soft White   #CBD5E1
+        ===================================================== */
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #050505;
+
+            color: #ffffff;
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+
+            height: 82px;
+
+            padding: 0 6%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(5, 5, 5, 0.95);
+
+            backdrop-filter:
+                blur(15px);
+
+            border-bottom:
+                1px solid
+                rgba(245, 217, 139, 0.15);
+        }
+
+
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
+
+        .logo {
+
+            width: 190px;
+
+            height: 60px;
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .logo a {
+
+            display: flex;
+
+            align-items: center;
+
+            text-decoration: none;
+        }
+
+
+        .logo img {
+
+            width: 190px;
+
+            height: 60px;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
+
+
+        /* =====================================================
+           NAVIGATION
+           WHITE ONLY
+        ===================================================== */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 42px;
+        }
+
+
+        nav a {
+
+            position: relative;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            transition:
+                color 0.3s ease;
+        }
+
+
+        nav a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -9px;
+
+            width: 0;
+
+            height: 2px;
+
+            background: #ffffff;
+
+            transition:
+                width 0.3s ease;
+        }
+
+
+        nav a:hover {
+
+            color: #ffffff;
+        }
+
+
+        nav a:hover::after {
+
+            width: 100%;
+        }
+
+
+        nav .active {
+
+            color: #ffffff;
+        }
+
+
+        nav .active::after {
+
+            width: 100%;
+
+            background: #ffffff;
+        }
+
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 560px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding:
+                100px 6%
+                90px;
+
+            background:
+
+                radial-gradient(
+                    circle at 82% 25%,
+                    rgba(245, 217, 139, 0.14),
+                    transparent 32%
+                ),
+
+                radial-gradient(
+                    circle at 12% 85%,
+                    rgba(200, 155, 60, 0.08),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #050505,
+                    #111111,
+                    #18130a
+                );
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 430px;
+
+            height: 430px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(245, 217, 139, 0.10);
+
+            right: -160px;
+
+            top: -150px;
+
+            animation:
+                floatingGlow 8s ease-in-out infinite;
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 280px;
+
+            height: 280px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(245, 217, 139, 0.07);
+
+            left: -130px;
+
+            bottom: -130px;
+
+            animation:
+                floatingGlow 10s ease-in-out infinite reverse;
+        }
+
+
+        @keyframes floatingGlow {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(18px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+        .hero-content {
+
+            max-width: 1100px;
+
+            width: 100%;
+
+            margin: auto;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .hero-label {
+
+            display: inline-block;
+
+            padding:
+                8px 16px;
+
+            margin-bottom:
+                25px;
+
+            border:
+                1px solid
+                rgba(245, 217, 139, 0.25);
+
+            border-radius:
+                50px;
+
+            background:
+                rgba(245, 217, 139, 0.06);
+
+            color:
+                #f5d98b;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                3px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(48px, 7vw, 82px);
+
+            line-height:
+                1.02;
+
+            letter-spacing:
+                -3px;
+
+            margin-bottom:
+                28px;
+        }
+
+
+        .hero h1 span {
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #f5d98b,
+                    #ffffff,
+                    #d6ad4e
+                );
+
+            -webkit-background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            background-clip:
+                text;
+        }
+
+
+        .hero p {
+
+            max-width:
+                700px;
+
+            font-size:
+                20px;
+
+            color:
+                #cbd5e1;
+        }
+
+
+
+        /* =====================================================
+           MAIN
+        ===================================================== */
+
+        .content {
+
+            max-width:
+                1100px;
+
+            margin:
+                auto;
+
+            padding:
+                100px 6%;
+        }
+
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+
+            margin-bottom:
+                70px;
+        }
+
+
+        .section-label {
+
+            color:
+                #f5d98b;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                3px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .intro h2 {
+
+            font-size:
+                clamp(34px, 5vw, 50px);
+
+            line-height:
+                1.1;
+
+            letter-spacing:
+                -1.5px;
+
+            margin-bottom:
+                22px;
+        }
+
+
+        .intro h2 span {
+
+            color:
+                #f5d98b;
+        }
+
+
+        .intro p {
+
+            max-width:
+                750px;
+
+            color:
+                #cbd5e1;
+
+            font-size:
+                18px;
+        }
+
+
+
+        /* =====================================================
+           CONTACT GRID
+        ===================================================== */
+
+        .contact-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                22px;
+
+            margin-bottom:
+                100px;
+        }
+
+
+
+        /* =====================================================
+           CONTACT CARD
+        ===================================================== */
+
+        .contact-card {
+
+            position:
+                relative;
+
+            padding:
+                42px;
+
+            min-height:
+                270px;
+
+            background:
+                #0d0d0d;
+
+            border:
+                1px solid
+                rgba(245, 217, 139, 0.15);
+
+            border-radius:
+                16px;
+
+            overflow:
+                hidden;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+        }
+
+
+        .contact-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 3px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #c89b3c,
+                    #f5d98b
+                );
+
+            transform:
+                scaleX(0);
+
+            transform-origin:
+                left;
+
+            transition:
+                transform 0.4s ease;
+        }
+
+
+        .contact-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                rgba(245, 217, 139, 0.38);
+
+            background:
+                #11100b;
+        }
+
+
+        .contact-card:hover::before {
+
+            transform:
+                scaleX(1);
+        }
+
+
+        .card-number {
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                2px;
+
+            color:
+                #c89b3c;
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .contact-card h3 {
+
+            font-size:
+                27px;
+
+            margin-bottom:
+                15px;
+
+            color:
+                #ffffff;
+        }
+
+
+        .contact-card p {
+
+            color:
+                #94a3b8;
+
+            font-size:
+                16px;
+
+            margin-bottom:
+                22px;
+        }
+
+
+        .email-link {
+
+            display:
+                inline-block;
+
+            color:
+                #f5d98b;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                700;
+
+            word-break:
+                break-word;
+
+            transition:
+                color 0.3s ease;
+        }
+
+
+        .email-link:hover {
+
+            color:
+                #ffffff;
+        }
+
+
+
+        /* =====================================================
+           EMAIL BOX
+        ===================================================== */
+
+        .email-box {
+
+            grid-column:
+                1 / -1;
+
+            text-align:
+                center;
+
+            padding:
+                50px 35px;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    rgba(245,217,139,0.08),
+                    transparent 65%
+                );
+
+            border:
+                1px solid
+                rgba(245,217,139,0.18);
+
+            border-radius:
+                18px;
+        }
+
+
+        .email-box h3 {
+
+            font-size:
+                30px;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        .email-box p {
+
+            max-width:
+                650px;
+
+            margin:
+                0 auto 25px;
+
+            color:
+                #cbd5e1;
+
+            font-size:
+                16px;
+        }
+
+
+
+        /* =====================================================
+           BUTTON
+        ===================================================== */
+
+        .button {
+
+            display:
+                inline-block;
+
+            padding:
+                14px 28px;
+
+            border-radius:
+                7px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #c89b3c,
+                    #f5d98b
+                );
+
+            color:
+                #111111;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                800;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .button:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(245,217,139,0.25);
+        }
+
+
+
+        /* =====================================================
+           SUPPORT SECTION
+        ===================================================== */
+
+        .support {
+
+            margin-bottom:
+                100px;
+        }
+
+
+        .support h2 {
+
+            font-size:
+                40px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .support h2 span {
+
+            color:
+                #f5d98b;
+        }
+
+
+        .support-intro {
+
+            color:
+                #cbd5e1;
+
+            font-size:
+                17px;
+
+            max-width:
+                720px;
+
+            margin-bottom:
+                40px;
+        }
+
+
+        .support-list {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                15px;
+        }
+
+
+        .support-item {
+
+            padding:
+                24px;
+
+            border-left:
+                2px solid
+                #c89b3c;
+
+            background:
+                #0b0b0b;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        .support-item:hover {
+
+            background:
+                #11100b;
+
+            border-left-color:
+                #f5d98b;
+        }
+
+
+        .support-item h3 {
+
+            font-size:
+                18px;
+
+            margin-bottom:
+                7px;
+
+            color:
+                #ffffff;
+        }
+
+
+        .support-item p {
+
+            color:
+                #94a3b8;
+
+            font-size:
+                14px;
+
+            margin:
+                0;
+        }
+
+
+
+        /* =====================================================
+           FINAL CTA
+        ===================================================== */
+
+        .cta {
+
+            text-align:
+                center;
+
+            padding:
+                70px 35px;
+
+            border:
+                1px solid
+                rgba(245,217,139,0.18);
+
+            border-radius:
+                20px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #0a0a0a,
+                    #1d1708,
+                    #0a0a0a
+                );
+        }
+
+
+        .cta h2 {
+
+            font-size:
+                40px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .cta h2 span {
+
+            color:
+                #f5d98b;
+        }
+
+
+        .cta p {
+
+            max-width:
+                650px;
+
+            margin:
+                0 auto 30px;
+
+            color:
+                #cbd5e1;
+
+            font-size:
+                17px;
+        }
+
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding:
+                40px 6%;
+
+            background:
+                #030303;
+
+            border-top:
+                1px solid
+                rgba(245,217,139,0.15);
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                20px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                14px;
+        }
+
+
+        footer a {
+
+            color:
+                #cbd5e1;
+
+            text-decoration:
+                none;
+
+            margin-left:
+                25px;
+
+            transition:
+                color 0.3s ease;
+        }
+
+
+        footer a:hover {
+
+            color:
+                #f5d98b;
+        }
+
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            header {
+
+                padding:
+                    0 5%;
+            }
+
+
+            .logo {
+
+                width:
+                    125px;
+
+                height:
+                    50px;
+            }
+
+
+            .logo img {
+
+                width:
+                    125px;
+
+                height:
+                    50px;
+            }
+
+
+            nav {
+
+                gap:
+                    15px;
+            }
+
+
+            nav a {
+
+                font-size:
+                    12px;
+            }
+
+
+            .hero {
+
+                min-height:
+                    500px;
+
+                padding:
+                    85px 5%;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    50px;
+
+                letter-spacing:
+                    -2px;
+            }
+
+
+            .hero p {
+
+                font-size:
+                    17px;
+            }
+
+
+            .content {
+
+                padding:
+                    70px 5%;
+            }
+
+
+            .contact-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .email-box {
+
+                grid-column:
+                    auto;
+            }
+
+
+            .support-list {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .cta {
+
+                padding:
+                    50px 25px;
+            }
+
+
+            footer {
+
+                padding:
+                    30px 5%;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+
+
+            footer a {
+
+                margin-left:
+                    0;
+
+                margin-right:
+                    18px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            nav {
+
+                gap:
+                    10px;
+            }
+
+
+            nav a {
+
+                font-size:
+                    11px;
+            }
+
+
+            .contact-card {
+
+                padding:
+                    30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="pp.png"
+                alt="Principia Press Logo"
+            >
+
+        </a>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="ebooks.html">
+            E-Books
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a
+            href="contact.html"
+            class="active"
+        >
+            Contact
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-label">
+
+            Get In Touch
+
+        </div>
+
+
+        <h1>
+
+            Let's talk.
+
+            <br>
+
+            <span>We're here to help.</span>
+
+        </h1>
+
+
+        <p>
+
+            Have a question about an e-book, a purchase,
+            digital delivery or Principia Press?
+
+            We'd be happy to hear from you.
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="content">
+
+
+
+    <!-- =================================================
+         INTRODUCTION
+    ================================================== -->
+
+    <section class="intro">
+
+
+        <div class="section-label">
+
+            Contact Principia Press
+
+        </div>
+
+
+        <h2>
+
+            Have a question?
+
+            <span>Reach out.</span>
+
+        </h2>
+
+
+        <p>
+
+            Whether you have a question about our
+            publications, need assistance with a purchase,
+            or simply want to get in touch, you can contact
+            Principia Press through the information below.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CONTACT CARDS
+    ================================================== -->
+
+    <section class="contact-grid">
+
+
+
+        <!-- CARD 1 -->
+
+        <div class="contact-card">
+
+
+            <div class="card-number">
+
+                01
+
+            </div>
+
+
+            <h3>
+
+                E-Book Enquiries
+
+            </h3>
+
+
+            <p>
+
+                Questions about our technical e-books,
+                their contents, formats or availability?
+
+                Contact us and we'll help you with the
+                information you need.
+
+            </p>
+
+
+            <a
+                href="mailto:your-email@example.com?subject=E-Book%20Enquiry"
+                class="email-link"
+            >
+
+                Send an E-Book Enquiry →
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="contact-card">
+
+
+            <div class="card-number">
+
+                02
+
+            </div>
+
+
+            <h3>
+
+                Purchase Support
+
+            </h3>
+
+
+            <p>
+
+                Having an issue with a purchase or payment?
+
+                Send us the details and we'll help resolve
+                the issue.
+
+            </p>
+
+
+            <a
+                href="mailto:your-email@example.com?subject=Purchase%20Support"
+                class="email-link"
+            >
+
+                Contact Purchase Support →
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="contact-card">
+
+
+            <div class="card-number">
+
+                03
+
+            </div>
+
+
+            <h3>
+
+                Digital Delivery
+
+            </h3>
+
+
+            <p>
+
+                Didn't receive your e-book after completing
+                your purchase?
+
+                Contact us with your purchase details.
+
+            </p>
+
+
+            <a
+                href="mailto:your-email@example.com?subject=Digital%20Delivery%20Support"
+                class="email-link"
+            >
+
+                Get Delivery Assistance →
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- CARD 4 -->
+
+        <div class="contact-card">
+
+
+            <div class="card-number">
+
+                04
+
+            </div>
+
+
+            <h3>
+
+                General Enquiries
+
+            </h3>
+
+
+            <p>
+
+                For general questions, feedback,
+                publishing-related enquiries or other
+                matters, feel free to contact us.
+
+            </p>
+
+
+            <a
+                href="mailto:your-email@example.com?subject=General%20Enquiry"
+                class="email-link"
+            >
+
+                Send General Enquiry →
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- EMAIL BOX -->
+
+        <div class="email-box">
+
+
+            <h3>
+
+                Contact Us Directly
+
+            </h3>
+
+
+            <p>
+
+                For all enquiries, you can reach Principia
+                Press directly through email.
+
+            </p>
+
+
+            <a
+                href="mailto:your-email@example.com"
+                class="button"
+            >
+
+                Email Principia Press
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         SUPPORT
+    ================================================== -->
+
+    <section class="support">
+
+
+        <div class="section-label">
+
+            Support
+
+        </div>
+
+
+        <h2>
+
+            How can we
+            <span>help?</span>
+
+        </h2>
+
+
+        <p class="support-intro">
+
+            To help us respond more efficiently, please
+            include relevant information about your enquiry
+            when contacting us.
+
+        </p>
+
+
+        <div class="support-list">
+
+
+            <div class="support-item">
+
+
+                <h3>
+
+                    E-Book Purchase
+
+                </h3>
+
+
+                <p>
+
+                    Include the name of the e-book and
+                    details of your purchase.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="support-item">
+
+
+                <h3>
+
+                    Payment Issue
+
+                </h3>
+
+
+                <p>
+
+                    Describe the payment issue and provide
+                    relevant transaction information.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="support-item">
+
+
+                <h3>
+
+                    Delivery Issue
+
+                </h3>
+
+
+                <p>
+
+                    Let us know if you completed a purchase
+                    but did not receive your digital product.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="support-item">
+
+
+                <h3>
+
+                    Feedback
+
+                </h3>
+
+
+                <p>
+
+                    Suggestions and feedback about Principia
+                    Press are always welcome.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         FINAL CTA
+    ================================================== -->
+
+    <section class="cta">
+
+
+        <h2>
+
+            Looking for our
+            <span>E-Books?</span>
+
+        </h2>
+
+
+        <p>
+
+            Explore practical technical resources covering
+            Digital Electronics, VLSI, FPGA, Verilog HDL
+            and RTL Design.
+
+        </p>
+
+
+        <a
+            href="ebooks.html"
+            class="button"
+        >
+
+            Explore E-Books
+
+        </a>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div>
+
+        © 2026 Principia Press
+
+    </div>
+
+
+    <div>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="ebooks.html">
+            E-Books
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="privacy.html">
+            Privacy Policy
+        </a>
+
+        <a href="terms.html">
+            Terms & Conditions
+        </a>
+
+        <a href="refund.html">
+            Refund Policy
+        </a>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>
