@@ -14,7 +14,6 @@
         content="Learn about Principia Press, an independent technical publishing initiative focused on Electronics, VLSI, FPGA, Verilog HDL and digital design."
     >
 
-
     <style>
 
         /* =====================================================
@@ -49,9 +48,9 @@
         body {
 
             font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
+                "Times New Roman",
+                Times,
+                serif;
 
             background: #050505;
 
@@ -100,40 +99,81 @@
 
 
         /* =====================================================
-           LOGO
+           BRAND / LOGO
         ===================================================== */
 
-        .logo {
-
-            width: 190px;
-
-            height: 60px;
+        .brand {
 
             display: flex;
 
             align-items: center;
-        }
 
-
-        .logo a {
-
-            display: flex;
-
-            align-items: center;
+            gap: 12px;
 
             text-decoration: none;
+
+            white-space: nowrap;
         }
 
 
-        .logo img {
+        .brand-logo {
 
-            width: 190px;
+            width: 55px;
 
-            height: 60px;
+            height: 55px;
 
             object-fit: contain;
 
             display: block;
+        }
+
+
+        .brand-name {
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size: 32px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #C89B3C 0%,
+                    #F5D98B 25%,
+                    #FFFFFF 50%,
+                    #F5D98B 75%,
+                    #C89B3C 100%
+                );
+
+            background-size: 250% auto;
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+
+            animation:
+                goldShine 5s linear infinite;
+        }
+
+
+        @keyframes goldShine {
+
+            0% {
+                background-position: 250% center;
+            }
+
+            100% {
+                background-position: -250% center;
+            }
         }
 
 
@@ -153,41 +193,73 @@
 
 
         nav a {
-    position: relative;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
 
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -9px;
-    width: 0;
-    height: 2px;
-    background: #ffffff;
-    transition: width 0.3s ease;
-}
+            position: relative;
 
-nav a:hover {
-    color: #ffffff;
-}
+            color: #ffffff;
 
-nav a:hover::after {
-    width: 100%;
-}
+            text-decoration: none;
 
-nav .active {
-    color: #ffffff;
-}
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-nav .active::after {
-    width: 100%;
-    background: #ffffff;
-}
+            font-size: 15px;
+
+            font-weight: 600;
+
+            transition:
+                color 0.3s ease;
+        }
+
+
+        nav a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -9px;
+
+            width: 0;
+
+            height: 2px;
+
+            background: #ffffff;
+
+            transition:
+                width 0.3s ease;
+        }
+
+
+        nav a:hover {
+
+            color: #ffffff;
+        }
+
+
+        nav a:hover::after {
+
+            width: 100%;
+        }
+
+
+        nav .active {
+
+            color: #ffffff;
+        }
+
+
+        nav .active::after {
+
+            width: 100%;
+
+            background: #ffffff;
+        }
+
 
 
         /* =====================================================
@@ -232,8 +304,6 @@ nav .active::after {
                 );
         }
 
-
-        /* Decorative glow */
 
         .hero::before {
 
@@ -288,36 +358,45 @@ nav .active::after {
         @keyframes floatGlow {
 
             0% {
-                transform: translateY(0px);
+                transform:
+                    translateY(0px);
             }
 
             50% {
-                transform: translateY(20px);
+                transform:
+                    translateY(20px);
             }
 
             100% {
-                transform: translateY(0px);
+                transform:
+                    translateY(0px);
             }
         }
 
 
         .hero-content {
 
-            max-width: 1100px;
+            max-width:
+                1100px;
 
-            margin: auto;
+            margin:
+                auto;
 
-            width: 100%;
+            width:
+                100%;
 
-            position: relative;
+            position:
+                relative;
 
-            z-index: 2;
+            z-index:
+                2;
         }
 
 
         .hero-label {
 
-            display: inline-block;
+            display:
+                inline-block;
 
             padding:
                 8px 16px;
@@ -337,6 +416,11 @@ nav .active::after {
 
             color:
                 #f5d98b;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-size:
                 12px;
@@ -432,6 +516,11 @@ nav .active::after {
 
             color:
                 #f5d98b;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-size:
                 12px;
@@ -556,15 +645,20 @@ nav .active::after {
 
             content: "";
 
-            position: absolute;
+            position:
+                absolute;
 
-            left: 0;
+            left:
+                0;
 
-            top: 0;
+            top:
+                0;
 
-            width: 4px;
+            width:
+                4px;
 
-            height: 100%;
+            height:
+                100%;
 
             background:
 
@@ -638,8 +732,11 @@ nav .active::after {
                 12px;
 
             transition:
+
                 transform 0.3s ease,
+
                 border-color 0.3s ease,
+
                 background 0.3s ease;
         }
 
@@ -661,6 +758,11 @@ nav .active::after {
 
             color:
                 #c89b3c;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-size:
                 13px;
@@ -816,6 +918,11 @@ nav .active::after {
             color:
                 #c89b3c;
 
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             letter-spacing:
                 4px;
 
@@ -961,11 +1068,18 @@ nav .active::after {
             text-decoration:
                 none;
 
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             font-weight:
                 800;
 
             transition:
+
                 transform 0.3s ease,
+
                 box-shadow 0.3s ease;
         }
 
@@ -1016,6 +1130,11 @@ nav .active::after {
             color:
                 #94a3b8;
 
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             font-size:
                 14px;
         }
@@ -1058,23 +1177,20 @@ nav .active::after {
             }
 
 
-            .logo {
+            .brand-logo {
 
                 width:
-                    125px;
+                    42px;
 
                 height:
-                    50px;
+                    42px;
             }
 
 
-            .logo img {
+            .brand-name {
 
-                width:
-                    125px;
-
-                height:
-                    50px;
+                font-size:
+                    23px;
             }
 
 
@@ -1195,6 +1311,23 @@ nav .active::after {
 
         @media (max-width: 500px) {
 
+            .brand-name {
+
+                font-size:
+                    20px;
+            }
+
+
+            .brand-logo {
+
+                width:
+                    38px;
+
+                height:
+                    38px;
+            }
+
+
             .approach-grid {
 
                 grid-template-columns:
@@ -1232,18 +1365,22 @@ nav .active::after {
 <header>
 
 
-    <div class="logo">
+    <a
+        href="index.html"
+        class="brand"
+    >
 
-        <a href="index.html">
+        <img
+            src="PP_black Backgrund.png"
+            alt="Principia Press Logo"
+            class="brand-logo"
+        >
 
-            <img
-                src="PP_black Backgrund.png"
-                alt="Principia Press"
-            >
+        <span class="brand-name">
+            Principia Press
+        </span>
 
-        </a>
-
-    </div>
+    </a>
 
 
     <nav>
