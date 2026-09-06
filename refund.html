@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Refund & Cancellation Policy | Principia Press</title>
+
+    <meta
+        name="description"
+        content="Refund and Cancellation Policy for Principia Press digital e-books and technical publications."
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background: #050505;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        header {
+            width: 100%;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #3d2d0d;
+            background: #050505;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .brand-logo {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .brand-name {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            background:
+                linear-gradient(
+                    90deg,
+                    #C89B3C 0%,
+                    #F5D98B 25%,
+                    #FFFFFF 50%,
+                    #F5D98B 75%,
+                    #C89B3C 100%
+                );
+            background-size: 250% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: goldShine 5s linear infinite;
+        }
+
+        @keyframes goldShine {
+            0% {
+                background-position: 250% center;
+            }
+
+            100% {
+                background-position: -250% center;
+            }
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .page-hero {
+            padding: 80px 0 55px;
+        }
+
+        .category {
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .page-title {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #C89B3C 0%,
+                    #F5D98B 25%,
+                    #FFFFFF 50%,
+                    #F5D98B 75%,
+                    #C89B3C 100%
+                );
+
+            background-size: 250% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: goldShine 5s linear infinite;
+        }
+
+        .page-subtitle {
+            font-size: 21px;
+            color: #d0d0d0;
+            max-width: 900px;
+        }
+
+        .gold-line {
+            width: 100px;
+            height: 2px;
+            background: #d4af37;
+            margin-top: 35px;
+        }
+
+        .section {
+            padding: 25px 0 50px;
+        }
+
+        .section h2 {
+            font-size: 34px;
+            margin-bottom: 18px;
+            color: #ffffff;
+        }
+
+        .section p {
+            color: #c7c7c7;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 950px;
+            margin-bottom: 18px;
+        }
+
+        .policy-box {
+            border: 1px solid #493812;
+            padding: 22px;
+            background: #090909;
+            margin: 25px 0;
+        }
+
+        .policy-box h3 {
+            color: #d4af37;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .policy-box p {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: #f5d98b;
+        }
+
+        .contact-box {
+            border: 1px solid #8f6b25;
+            padding: 35px 30px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #080808,
+                    #0c0c0c
+                );
+            margin-top: 25px;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        .contact-email {
+            color: #d4af37;
+            font-size: 19px;
+            text-decoration: none;
+        }
+
+        .contact-email:hover {
+            color: #f5d98b;
+        }
+
+        footer {
+            border-top: 1px solid #3d2d0d;
+            padding: 30px 20px;
+            text-align: center;
+            color: #8e8e8e;
+            margin-top: 50px;
+        }
+
+        .footer-links {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #bcbcbc;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 15px;
+        }
+
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+
+        @media (max-width: 900px) {
+            .page-title {
+                font-size: 44px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .brand-name {
+                font-size: 28px;
+            }
+
+            .page-hero {
+                padding-top: 50px;
+            }
+
+            .page-title {
+                font-size: 38px;
+            }
+
+            .section h2 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="brand">
+
+        <img
+            src="./PP_black Backgrund.png"
+            alt="Principia Press Logo"
+            class="brand-logo"
+        >
+
+        <span class="brand-name">
+            Principia Press
+        </span>
+
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ebooks.html">E-Books</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <!-- PAGE HERO -->
+
+    <section class="page-hero">
+
+        <div class="category">
+            Legal
+        </div>
+
+        <h1 class="page-title">
+            Refund & Cancellation Policy
+        </h1>
+
+        <p class="page-subtitle">
+            This policy explains the refund and cancellation conditions
+            applicable to digital e-books and other digital products
+            offered by Principia Press.
+        </p>
+
+        <div class="gold-line"></div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="section">
+
+        <h2>
+            1. Introduction
+        </h2>
+
+        <p>
+            Principia Press provides technical e-books and digital
+            educational publications through its website.
+        </p>
+
+        <p>
+            Because our products are primarily digital products that may
+            be delivered electronically after successful payment,
+            refunds and cancellations are subject to the conditions
+            described below.
+        </p>
+
+    </section>
+
+
+    <!-- DIGITAL PRODUCTS -->
+
+    <section class="section">
+
+        <h2>
+            2. Digital Products
+        </h2>
+
+        <p>
+            Our e-books and other digital publications are supplied in
+            electronic formats. Once a payment has been successfully
+            completed, access or delivery of the purchased digital
+            product may be initiated electronically.
+        </p>
+
+        <div class="policy-box">
+
+            <h3>
+                Important
+            </h3>
+
+            <p>
+                Please review the product title, description and available
+                information before completing your purchase.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CANCELLATION -->
+
+    <section class="section">
+
+        <h2>
+            3. Cancellation Policy
+        </h2>
+
+        <p>
+            A purchase may generally be cancelled only before the digital
+            product has been delivered or access has been provided,
+            subject to the applicable payment provider's processing status.
+        </p>
+
+        <p>
+            Once a digital product has been delivered or access has been
+            provided, cancellation may no longer be possible because the
+            digital content may already have been accessed or downloaded.
+        </p>
+
+    </section>
+
+
+    <!-- REFUNDS -->
+
+    <section class="section">
+
+        <h2>
+            4. Refund Policy
+        </h2>
+
+        <p>
+            Refund requests for digital products are considered on a
+            case-by-case basis.
+        </p>
+
+        <div class="policy-box">
+
+            <h3>
+                Refunds May Be Considered For
+            </h3>
+
+            <p>
+                Duplicate payments, technical delivery failures, or other
+                genuine transaction-related issues may be reviewed for a
+                possible refund.
+            </p>
+
+        </div>
+
+        <div class="policy-box">
+
+            <h3>
+                Digital Product Access
+            </h3>
+
+            <p>
+                Refund requests based solely on a change of mind after
+                successful delivery or access to a digital product may
+                not be accepted.
+            </p>
+
+        </div>
+
+        <p>
+            Any refund decision will depend on the circumstances of the
+            transaction and the information available to Principia Press.
+        </p>
+
+    </section>
+
+
+    <!-- FAILED TRANSACTIONS -->
+
+    <section class="section">
+
+        <h2>
+            5. Failed or Pending Payments
+        </h2>
+
+        <p>
+            If money has been debited from your account but the order
+            has not been successfully completed or the product has not
+            been delivered, please contact us with the relevant
+            transaction details.
+        </p>
+
+        <p>
+            We will review the transaction status and, where appropriate,
+            coordinate with the payment service provider to resolve the
+            issue.
+        </p>
+
+    </section>
+
+
+    <!-- PAYMENT PROVIDERS -->
+
+    <section class="section">
+
+        <h2>
+            6. Payment Service Providers
+        </h2>
+
+        <p>
+            Payments may be processed through third-party payment
+            service providers such as Razorpay or PhonePe, depending on
+            the payment method made available on the website.
+        </p>
+
+        <p>
+            Payment processing, transaction status and certain refund
+            procedures may also be subject to the applicable policies and
+            terms of the payment service provider.
+        </p>
+
+    </section>
+
+
+    <!-- DELIVERY ISSUES -->
+
+    <section class="section">
+
+        <h2>
+            7. Digital Delivery Issues
+        </h2>
+
+        <p>
+            If you have completed a payment but have not received the
+            purchased digital product, please contact us.
+        </p>
+
+        <p>
+            We will review the payment and delivery status and attempt
+            to resolve legitimate delivery problems.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="section">
+
+        <h2>
+            8. How to Request a Refund
+        </h2>
+
+        <p>
+            To request a refund or report a payment or delivery issue,
+            contact Principia Press using the official email address
+            below.
+        </p>
+
+        <div class="contact-box">
+
+            <p>
+                <strong class="highlight">
+                    Official Email
+                </strong>
+            </p>
+
+            <p>
+                <a
+                    href="mailto:principiapressofficial@gmail.com"
+                    class="contact-email"
+                >
+                    principiapressofficial@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Please include your name, purchased product, date of
+                transaction and relevant transaction/order information.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- POLICY CHANGES -->
+
+    <section class="section">
+
+        <h2>
+            9. Changes to This Policy
+        </h2>
+
+        <p>
+            Principia Press may update this Refund & Cancellation Policy
+            from time to time to reflect changes in products, payment
+            methods, delivery systems or applicable requirements.
+        </p>
+
+        <p>
+            The updated version will be published on this page.
+        </p>
+
+    </section>
+
+
+    <!-- EFFECTIVE DATE -->
+
+    <section class="section">
+
+        <h2>
+            10. Effective Date
+        </h2>
+
+        <p>
+            This Refund & Cancellation Policy is effective from
+            <span class="highlight">September 2026</span>.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="ebooks.html">
+            E-Books
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="privacy.html">
+            Privacy Policy
+        </a>
+
+        <a href="terms.html">
+            Terms & Conditions
+        </a>
+
+        <a href="refund.html">
+            Refund & Cancellation
+        </a>
+
+    </div>
+
+    © 2026 Principia Press. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
