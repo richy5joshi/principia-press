@@ -14,6 +14,12 @@
         content="Principia Press publishes practical technical resources for Electronics, VLSI, FPGA, Verilog and digital design."
     >
 
+    <!-- Gothic / Blackletter Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap"
+        rel="stylesheet"
+    >
+
     <style>
 
         /* =====================================================
@@ -85,40 +91,72 @@
 
 
         /* =====================================================
-           LOGO
+           BRAND / LOGO
         ===================================================== */
 
-        .logo {
-
-            width: 190px;
-
-            height: 60px;
+        .brand {
 
             display: flex;
 
             align-items: center;
-        }
 
-
-        .logo a {
-
-            display: flex;
-
-            align-items: center;
+            gap: 14px;
 
             text-decoration: none;
+
+            white-space: nowrap;
         }
 
 
-        .logo img {
+        .brand-logo {
 
-            width: 190px;
+            width: 58px;
 
-            height: 60px;
+            height: 58px;
 
             object-fit: contain;
 
             display: block;
+
+            border-radius: 4px;
+        }
+
+
+        .brand-name {
+
+            font-family:
+                "UnifrakturCook",
+                "Old English Text MT",
+                "UnifrakturMaguntia",
+                serif;
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
+
+            color: #f5d98b;
+
+            line-height: 1;
+
+            text-shadow:
+                0 0 12px
+                rgba(245, 217, 139, 0.10);
+
+            transition:
+                color 0.3s ease,
+                text-shadow 0.3s ease;
+        }
+
+
+        .brand:hover .brand-name {
+
+            color: #fff4c9;
+
+            text-shadow:
+                0 0 18px
+                rgba(245, 217, 139, 0.22);
         }
 
 
@@ -1005,7 +1043,7 @@
 
 
         /* =====================================================
-           MOBILE
+           TABLET / MOBILE
         ===================================================== */
 
         @media (max-width: 800px) {
@@ -1014,26 +1052,33 @@
 
                 padding:
                     0 5%;
+
+                height:
+                    75px;
             }
 
 
-            .logo {
+            .brand {
 
-                width:
-                    125px;
-
-                height:
-                    50px;
+                gap:
+                    9px;
             }
 
 
-            .logo img {
+            .brand-logo {
 
                 width:
-                    125px;
+                    48px;
 
                 height:
-                    50px;
+                    48px;
+            }
+
+
+            .brand-name {
+
+                font-size:
+                    24px;
             }
 
 
@@ -1143,7 +1188,35 @@
 
 
 
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
         @media (max-width: 500px) {
+
+            header {
+
+                height:
+                    70px;
+            }
+
+
+            .brand-logo {
+
+                width:
+                    42px;
+
+                height:
+                    42px;
+            }
+
+
+            .brand-name {
+
+                font-size:
+                    20px;
+            }
+
 
             nav {
 
@@ -1208,19 +1281,31 @@
 <header>
 
 
-    <div class="logo">
+    <!-- BRAND -->
 
-        <a href="index.html">
+    <a
+        href="index.html"
+        class="brand"
+    >
 
-            <img
-                src="PP_black Backgrund.png"
-                alt="Principia Press Logo"
-            >
+        <img
+            src="PP_black Backgrund.png"
+            alt="Principia Press Logo"
+            class="brand-logo"
+        >
 
-        </a>
 
-    </div>
+        <span class="brand-name">
 
+            Principia Press
+
+        </span>
+
+    </a>
+
+
+
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -1231,13 +1316,16 @@
             Home
         </a>
 
+
         <a href="ebooks.html">
             E-Books
         </a>
 
+
         <a href="about.html">
             About
         </a>
+
 
         <a href="contact.html">
             Contact
@@ -1391,13 +1479,6 @@
             <!--
                 RAZORPAY PAYMENT LINK
                 WILL BE ADDED HERE LATER.
-
-                Example:
-
-                <a href="YOUR_RAZORPAY_LINK"
-                   class="button">
-                   Buy Now →
-                </a>
             -->
 
 
@@ -1654,25 +1735,31 @@
             Home
         </a>
 
+
         <a href="ebooks.html">
             E-Books
         </a>
+
 
         <a href="about.html">
             About
         </a>
 
+
         <a href="contact.html">
             Contact
         </a>
+
 
         <a href="privacy.html">
             Privacy Policy
         </a>
 
+
         <a href="terms.html">
             Terms & Conditions
         </a>
+
 
         <a href="refund.html">
             Refund Policy
@@ -1682,6 +1769,7 @@
 
 
 </footer>
+
 
 
 </body>
