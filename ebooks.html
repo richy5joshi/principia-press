@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Books | Principia Press</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #050505;
+            color: #ffffff;
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 6%;
+            border-bottom: 1px solid #8f6b25;
+            background: #050505;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .brand-logo {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .brand-name {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #C89B3C 0%,
+                    #F5D98B 25%,
+                    #FFFFFF 50%,
+                    #F5D98B 75%,
+                    #C89B3C 100%
+                );
+
+            background-size: 250% auto;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            animation: goldShine 5s linear infinite;
+        }
+
+        @keyframes goldShine {
+
+            0% {
+                background-position: 250% center;
+            }
+
+            100% {
+                background-position: -250% center;
+            }
+
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        nav a.active {
+            color: #d4af37;
+        }
+
+
+        /* =========================
+           PAGE TITLE
+        ========================= */
+
+        .page-title {
+            text-align: center;
+            padding: 75px 20px 45px;
+        }
+
+        .page-title h1 {
+            font-size: 52px;
+            font-weight: 700;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #C89B3C,
+                    #F5D98B,
+                    #FFFFFF,
+                    #F5D98B,
+                    #C89B3C
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-title p {
+            margin-top: 15px;
+            color: #dddddd;
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           GOLD DIVIDER
+        ========================= */
+
+        .divider {
+            width: 180px;
+            height: 1px;
+            background: #c89b3c;
+            margin: 25px auto 0;
+            position: relative;
+        }
+
+        .divider::after {
+            content: "◆";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #050505;
+            color: #d4af37;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           BOOK GRID
+        ========================= */
+
+        .books-container {
+            width: 90%;
+            max-width: 1250px;
+            margin: 20px auto 80px;
+
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 35px;
+        }
+
+
+        /* =========================
+           BOOK CARD
+        ========================= */
+
+        .book-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    #101010,
+                    #070707
+                );
+
+            border: 1px solid #70531d;
+            padding: 18px;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
+
+            box-shadow:
+                0 10px 35px rgba(212, 175, 55, 0.15);
+        }
+
+
+        /* =========================
+           COVER
+        ========================= */
+
+        .book-cover {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+
+            background: #07111d;
+
+            border: 1px solid #8f6b25;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* Temporary cover text
+           Remove when actual cover
+           image is uploaded.
+        */
+
+        .cover-placeholder {
+            text-align: center;
+            padding: 25px;
+            color: #d4af37;
+        }
+
+        .cover-placeholder .small {
+            font-size: 15px;
+            letter-spacing: 3px;
+        }
+
+        .cover-placeholder .large {
+            margin-top: 20px;
+            font-size: 32px;
+            line-height: 1.2;
+        }
+
+
+        /* =========================
+           BOOK INFORMATION
+        ========================= */
+
+        .book-info {
+            padding: 25px 8px 10px;
+            flex-grow: 1;
+        }
+
+        .book-category {
+            color: #d4af37;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .book-title {
+            font-size: 27px;
+            margin-top: 8px;
+            color: #ffffff;
+            line-height: 1.25;
+        }
+
+        .book-description {
+            color: #cccccc;
+            font-size: 17px;
+            margin-top: 14px;
+        }
+
+        .book-meta {
+            margin-top: 18px;
+            padding-top: 14px;
+
+            border-top: 1px solid #3c321e;
+
+            color: #dddddd;
+            font-size: 16px;
+        }
+
+        .book-meta strong {
+            color: #d4af37;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .book-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button {
+            flex: 1;
+
+            text-align: center;
+
+            padding: 12px 10px;
+
+            text-decoration: none;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size: 16px;
+
+            border: 1px solid #c89b3c;
+
+            transition: 0.3s;
+        }
+
+        .view-button {
+            color: #d4af37;
+            background: transparent;
+        }
+
+        .view-button:hover {
+            background: #d4af37;
+            color: #050505;
+        }
+
+        .buy-button {
+            background: #d4af37;
+            color: #050505;
+        }
+
+        .buy-button:hover {
+            background: #f5d98b;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #70531d;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            color: #999999;
+
+            font-size: 15px;
+        }
+
+        footer .gold {
+            color: #d4af37;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .brand-name {
+                font-size: 27px;
+            }
+
+            .page-title h1 {
+                font-size: 40px;
+            }
+
+            .page-title p {
+                font-size: 17px;
+            }
+
+            .books-container {
+                width: 92%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="PP_black Backgrund.png"
+                alt="Principia Press Logo"
+                class="brand-logo"
+            >
+
+            <span class="brand-name">
+                Principia Press
+            </span>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="ebooks.html" class="active">
+                E-Books
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         PAGE TITLE
+    ========================= -->
+
+    <section class="page-title">
+
+        <h1>
+            Principia Press E-Books
+        </h1>
+
+        <p>
+            Technical guides for Digital Electronics, VLSI, RTL Design
+            and Design Verification.
+        </p>
+
+        <div class="divider"></div>
+
+    </section>
+
+
+
+    <!-- =========================
+         BOOKS
+    ========================= -->
+
+    <main class="books-container">
+
+
+        <!-- BOOK 1 -->
+
+        <article class="book-card">
+
+            <div class="book-cover">
+
+                <div class="cover-placeholder">
+
+                    <div class="small">
+                        PRINCIPIA PRESS
+                    </div>
+
+                    <div class="large">
+                        DIGITAL<br>
+                        ELECTRONICS<br>
+                        IN 5 DAYS
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="book-info">
+
+                <div class="book-category">
+                    Digital Electronics
+                </div>
+
+                <h2 class="book-title">
+                    Digital Electronics in 5 Days
+                </h2>
+
+                <p class="book-description">
+                    A beginner-friendly, interview-oriented guide
+                    covering number systems, logic gates, Boolean
+                    algebra, sequential circuits, FSMs and timing
+                    concepts.
+                </p>
+
+                <div class="book-meta">
+
+                    <strong>Format:</strong>
+                    E-Book
+
+                    <br>
+
+                    <strong>Series:</strong>
+                    5 Days
+
+                </div>
+
+
+                <div class="book-buttons">
+
+                    <a
+                        href="de-5-days.html"
+                        class="button view-button"
+                    >
+                        View Details
+                    </a>
+
+                    <a
+                        href="#"
+                        class="button buy-button"
+                    >
+                        Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BOOK 2 -->
+
+        <article class="book-card">
+
+            <div class="book-cover">
+
+                <div class="cover-placeholder">
+
+                    <div class="small">
+                        PRINCIPIA PRESS
+                    </div>
+
+                    <div class="large">
+                        PHYSICAL<br>
+                        DESIGN<br>
+                        IN 7 DAYS
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="book-info">
+
+                <div class="book-category">
+                    Physical Design
+                </div>
+
+                <h2 class="book-title">
+                    Physical Design in 7 Days
+                </h2>
+
+                <p class="book-description">
+                    An introductory Physical Design guide explaining
+                    the backend of VLSI, from gate-level netlist to
+                    physical layout, with focus on timing, power,
+                    area and manufacturability.
+                </p>
+
+                <div class="book-meta">
+
+                    <strong>Format:</strong>
+                    E-Book
+
+                    <br>
+
+                    <strong>Series:</strong>
+                    7 Days
+
+                </div>
+
+
+                <div class="book-buttons">
+
+                    <a
+                        href="physical-design-7-days.html"
+                        class="button view-button"
+                    >
+                        View Details
+                    </a>
+
+                    <a
+                        href="#"
+                        class="button buy-button"
+                    >
+                        Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BOOK 3 -->
+
+        <article class="book-card">
+
+            <div class="book-cover">
+
+                <div class="cover-placeholder">
+
+                    <div class="small">
+                        PRINCIPIA PRESS
+                    </div>
+
+                    <div class="large">
+                        200+<br>
+                        DE FAQs<br>
+                        FOR INTERVIEW PREP
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="book-info">
+
+                <div class="book-category">
+                    Interview Preparation
+                </div>
+
+                <h2 class="book-title">
+                    200+ DE FAQs for Interview Prep
+                </h2>
+
+                <p class="book-description">
+                    A question-focused Digital Electronics resource
+                    designed for interview preparation and quick
+                    revision.
+                </p>
+
+                <div class="book-meta">
+
+                    <strong>Format:</strong>
+                    E-Book
+
+                    <br>
+
+                    <strong>Questions:</strong>
+                    200+
+
+                </div>
+
+
+                <div class="book-buttons">
+
+                    <a
+                        href="de-faqs.html"
+                        class="button view-button"
+                    >
+                        View Details
+                    </a>
+
+                    <a
+                        href="#"
+                        class="button buy-button"
+                    >
+                        Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BOOK 4 -->
+
+        <article class="book-card">
+
+            <div class="book-cover">
+
+                <div class="cover-placeholder">
+
+                    <div class="small">
+                        PRINCIPIA PRESS
+                    </div>
+
+                    <div class="large">
+                        DESIGN &<br>
+                        VERIFICATION<br>
+                        INTERVIEW QUESTIONS
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="book-info">
+
+                <div class="book-category">
+                    Design Verification
+                </div>
+
+                <h2 class="book-title">
+                    Design & Verification Interview Questions
+                </h2>
+
+                <p class="book-description">
+                    100 real-industry-oriented interview questions
+                    covering SystemVerilog, UVM, assertions, coverage,
+                    randomization, testbench architecture, debugging,
+                    methodology and protocols.
+                </p>
+
+                <div class="book-meta">
+
+                    <strong>Format:</strong>
+                    E-Book
+
+                    <br>
+
+                    <strong>Questions:</strong>
+                    100
+                </div>
+
+
+                <div class="book-buttons">
+
+                    <a
+                        href="design-verification.html"
+                        class="button view-button"
+                    >
+                        View Details
+                    </a>
+
+                    <a
+                        href="#"
+                        class="button buy-button"
+                    >
+                        Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BOOK 5 -->
+
+        <article class="book-card">
+
+            <div class="book-cover">
+
+                <div class="cover-placeholder">
+
+                    <div class="small">
+                        PRINCIPIA PRESS
+                    </div>
+
+                    <div class="large">
+                        RTL DESIGN<br>
+                        ENGINEERING<br>
+                        100 INTERVIEW QUESTIONS
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="book-info">
+
+                <div class="book-category">
+                    RTL Design
+                </div>
+
+                <h2 class="book-title">
+                    RTL Design Engineering
+                </h2>
+
+                <p class="book-description">
+                    A practical interview preparation handbook covering
+                    Verilog, RTL coding, FSMs, timing, synthesis and
+                    coding practices, with interview tips and examples.
+                </p>
+
+                <div class="book-meta">
+
+                    <strong>Format:</strong>
+                    E-Book
+
+                    <br>
+
+                    <strong>Questions:</strong>
+                    100
+
+                </div>
+
+
+                <div class="book-buttons">
+
+                    <a
+                        href="rtl-design.html"
+                        class="button view-button"
+                    >
+                        View Details
+                    </a>
+
+                    <a
+                        href="#"
+                        class="button buy-button"
+                    >
+                        Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <span class="gold">
+                Principia Press
+            </span>
+            . All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
