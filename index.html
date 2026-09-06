@@ -14,13 +14,6 @@
         content="Principia Press publishes practical technical resources for Electronics, VLSI, FPGA, Verilog and digital design."
     >
 
-    <!-- Gothic / Blackletter Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap"
-        rel="stylesheet"
-    >
-
-
     <style>
 
         /* =====================================================
@@ -33,18 +26,16 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
 
             font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
+                "Times New Roman",
+                Times,
+                serif;
 
             background: #050505;
 
@@ -56,9 +47,8 @@
         }
 
 
-
         /* =====================================================
-           NAVIGATION
+           HEADER
         ===================================================== */
 
         header {
@@ -87,7 +77,6 @@
         }
 
 
-
         /* =====================================================
            BRAND
         ===================================================== */
@@ -106,8 +95,6 @@
         }
 
 
-        /* YOUR LOGO */
-
         .brand-logo {
 
             width: 70px;
@@ -122,51 +109,93 @@
         }
 
 
-        /* PRINCIPIA PRESS */
+        /* =====================================================
+           PRINCIPIA PRESS BRAND NAME
+        ===================================================== */
 
         .brand-name {
 
             font-family:
-                "UnifrakturCook",
-                "Old English Text MT",
-                "UnifrakturMaguntia",
+                "Times New Roman",
+                Times,
                 serif;
 
             font-size: 32px;
 
             font-weight: 700;
 
-            letter-spacing: 0.5px;
-
-            color: #f5d98b;
+            letter-spacing: 1px;
 
             line-height: 1;
 
             display: inline-block;
 
+            background:
+
+                linear-gradient(
+                    115deg,
+
+                    #8f6500 0%,
+
+                    #d4a72c 15%,
+
+                    #fff1a8 30%,
+
+                    #f5d36b 42%,
+
+                    #fff8cf 50%,
+
+                    #d6a62c 65%,
+
+                    #9b6b00 80%,
+
+                    #f6d66b 100%
+                );
+
+            background-size: 250% 100%;
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                goldShine 5s linear infinite;
+
             text-shadow:
                 0 0 10px
-                rgba(245, 217, 139, 0.10);
-
-            transition:
-                color 0.3s ease,
-                text-shadow 0.3s ease;
+                rgba(245, 217, 139, 0.12);
         }
 
 
         .brand:hover .brand-name {
 
-            color: #fff4c9;
-
             text-shadow:
-                0 0 18px
-                rgba(245, 217, 139, 0.25);
+                0 0 20px
+                rgba(245, 217, 139, 0.30);
         }
 
 
+        /* =====================================================
+           GOLD SHINE
+        ===================================================== */
+
+        @keyframes goldShine {
+
+            0% {
+                background-position: 250% center;
+            }
+
+            100% {
+                background-position: -250% center;
+            }
+
+        }
+
 
         /* =====================================================
-           NAVIGATION LINKS
+           NAVIGATION
         ===================================================== */
 
         nav {
@@ -187,9 +216,14 @@
 
             text-decoration: none;
 
-            font-size: 15px;
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
-            font-weight: 600;
+            font-size: 16px;
+
+            font-weight: 700;
 
             transition:
                 color 0.3s ease;
@@ -235,7 +269,6 @@
 
             background: #ffffff;
         }
-
 
 
         /* =====================================================
@@ -346,7 +379,6 @@
         }
 
 
-
         /* =====================================================
            HERO CONTENT
         ===================================================== */
@@ -385,11 +417,13 @@
             background:
                 rgba(245, 217, 139, 0.06);
 
-            color:
-                #f5d98b;
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
             font-size:
-                12px;
+                13px;
 
             font-weight:
                 700;
@@ -400,40 +434,15 @@
             text-transform:
                 uppercase;
 
-            animation:
-                fadeUp 0.8s ease forwards;
-        }
-
-
-        .hero h1 {
-
-            font-size:
-                clamp(48px, 7vw, 85px);
-
-            line-height:
-                1.02;
-
-            letter-spacing:
-                -4px;
-
-            margin-bottom:
-                30px;
-
-            animation:
-                fadeUp 1s ease forwards;
-        }
-
-
-        .hero h1 span {
-
-            background:
+            background-image:
 
                 linear-gradient(
-                    90deg,
-                    #c89b3c,
-                    #f5d98b,
-                    #fff4c9,
-                    #d6ad4e
+                    115deg,
+                    #a06e00,
+                    #d9ad38,
+                    #fff0a0,
+                    #d4a52b,
+                    #9a6800
                 );
 
             background-size:
@@ -442,26 +451,84 @@
             -webkit-background-clip:
                 text;
 
+            background-clip:
+                text;
+
             -webkit-text-fill-color:
                 transparent;
+
+            animation:
+                goldShine 6s linear infinite;
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size:
+                clamp(48px, 7vw, 85px);
+
+            line-height:
+                1.02;
+
+            letter-spacing:
+                -3px;
+
+            margin-bottom:
+                30px;
+
+            font-weight:
+                700;
+
+            animation:
+                fadeUp 1s ease forwards;
+        }
+
+
+        /* GOLD SECOND LINE */
+
+        .hero h1 span {
+
+            background:
+
+                linear-gradient(
+                    115deg,
+
+                    #9b6b00 0%,
+
+                    #d6a62c 15%,
+
+                    #fff0a3 30%,
+
+                    #f5d36b 42%,
+
+                    #fff8cf 50%,
+
+                    #d4a52a 65%,
+
+                    #956500 80%,
+
+                    #f8da72 100%
+                );
+
+            background-size:
+                250% auto;
+
+            -webkit-background-clip:
+                text;
 
             background-clip:
                 text;
 
+            -webkit-text-fill-color:
+                transparent;
+
             animation:
-                goldFlow 5s linear infinite;
-        }
-
-
-        @keyframes goldFlow {
-
-            0% {
-                background-position: 0% center;
-            }
-
-            100% {
-                background-position: 250% center;
-            }
+                goldShine 5s linear infinite;
         }
 
 
@@ -469,6 +536,11 @@
 
             max-width:
                 690px;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
             font-size:
                 20px;
@@ -504,7 +576,6 @@
         }
 
 
-
         /* =====================================================
            BUTTON
         ===================================================== */
@@ -520,22 +591,46 @@
             border-radius:
                 7px;
 
-            background:
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
-                linear-gradient(
-                    135deg,
-                    #c89b3c,
-                    #f5d98b
-                );
+            font-size:
+                17px;
 
-            color:
-                #111111;
+            font-weight:
+                700;
 
             text-decoration:
                 none;
 
-            font-weight:
-                800;
+            color:
+                #111111;
+
+            background:
+
+                linear-gradient(
+                    120deg,
+
+                    #b47d00 0%,
+
+                    #e2b93f 22%,
+
+                    #fff0a3 42%,
+
+                    #f3d267 50%,
+
+                    #d6a52b 72%,
+
+                    #9c6900 100%
+                );
+
+            background-size:
+                220% auto;
+
+            animation:
+                buttonGoldShine 5s linear infinite;
 
             transition:
                 transform 0.3s ease,
@@ -553,6 +648,19 @@
                 rgba(245, 217, 139, 0.20);
         }
 
+
+        @keyframes buttonGoldShine {
+
+            0% {
+                background-position:
+                    200% center;
+            }
+
+            100% {
+                background-position:
+                    -200% center;
+            }
+        }
 
 
         /* =====================================================
@@ -574,11 +682,13 @@
 
         .section-label {
 
-            color:
-                #f5d98b;
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
             font-size:
-                12px;
+                13px;
 
             font-weight:
                 700;
@@ -591,10 +701,41 @@
 
             margin-bottom:
                 15px;
+
+            background:
+
+                linear-gradient(
+                    115deg,
+                    #a06e00,
+                    #d9ad38,
+                    #fff0a0,
+                    #d4a52b,
+                    #9a6800
+                );
+
+            background-size:
+                250% auto;
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            animation:
+                goldShine 6s linear infinite;
         }
 
 
         .section-title {
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
             font-size:
                 clamp(35px, 5vw, 52px);
@@ -603,7 +744,7 @@
                 1.1;
 
             letter-spacing:
-                -1.5px;
+                -1px;
 
             margin-bottom:
                 18px;
@@ -612,10 +753,32 @@
 
         .section-title span {
 
-            color:
-                #f5d98b;
-        }
+            background:
 
+                linear-gradient(
+                    115deg,
+                    #a06e00,
+                    #d9ad38,
+                    #fff0a0,
+                    #d4a52b,
+                    #9a6800
+                );
+
+            background-size:
+                250% auto;
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            animation:
+                goldShine 6s linear infinite;
+        }
 
 
         /* =====================================================
@@ -634,11 +797,16 @@
             max-width:
                 700px;
 
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
             color:
                 #94a3b8;
 
             font-size:
-                17px;
+                18px;
 
             margin-bottom:
                 45px;
@@ -681,18 +849,23 @@
 
         .book-card::before {
 
-            content: "";
+            content:
+                "";
 
             position:
                 absolute;
 
-            top: 0;
+            top:
+                0;
 
-            left: 0;
+            left:
+                0;
 
-            width: 100%;
+            width:
+                100%;
 
-            height: 4px;
+            height:
+                4px;
 
             background:
 
@@ -707,7 +880,8 @@
 
         .book-card::after {
 
-            content: "";
+            content:
+                "";
 
             position:
                 absolute;
@@ -748,11 +922,13 @@
 
         .book-category {
 
-            color:
-                #f5d98b;
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
             font-size:
-                12px;
+                13px;
 
             font-weight:
                 700;
@@ -765,10 +941,41 @@
 
             margin-bottom:
                 20px;
+
+            background:
+
+                linear-gradient(
+                    115deg,
+                    #a06e00,
+                    #d9ad38,
+                    #fff0a0,
+                    #d4a52b,
+                    #9a6800
+                );
+
+            background-size:
+                250% auto;
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            animation:
+                goldShine 6s linear infinite;
         }
 
 
         .book-card h3 {
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
             font-size:
                 clamp(30px, 4vw, 44px);
@@ -786,6 +993,11 @@
 
         .book-card p {
 
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
             color:
                 #94a3b8;
 
@@ -793,7 +1005,7 @@
                 680px;
 
             font-size:
-                17px;
+                18px;
 
             margin-bottom:
                 32px;
@@ -818,6 +1030,11 @@
 
         .price {
 
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
             font-size:
                 30px;
 
@@ -835,12 +1052,11 @@
                 #94a3b8;
 
             font-size:
-                13px;
+                14px;
 
             font-weight:
                 400;
         }
-
 
 
         /* =====================================================
@@ -899,11 +1115,13 @@
 
         .category-number {
 
-            color:
-                #c89b3c;
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
             font-size:
-                12px;
+                13px;
 
             letter-spacing:
                 2px;
@@ -913,13 +1131,44 @@
 
             margin-bottom:
                 12px;
+
+            background:
+
+                linear-gradient(
+                    115deg,
+                    #a06e00,
+                    #d9ad38,
+                    #fff0a0,
+                    #d4a52b,
+                    #9a6800
+                );
+
+            background-size:
+                250% auto;
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            animation:
+                goldShine 6s linear infinite;
         }
 
 
         .category h3 {
 
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
             font-size:
-                18px;
+                20px;
 
             margin-bottom:
                 6px;
@@ -928,13 +1177,17 @@
 
         .category p {
 
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
             color:
                 #64748b;
 
             font-size:
-                14px;
+                15px;
         }
-
 
 
         /* =====================================================
@@ -950,11 +1203,16 @@
 
         .about-preview p {
 
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
             color:
                 #94a3b8;
 
             font-size:
-                19px;
+                20px;
 
             margin-bottom:
                 25px;
@@ -963,14 +1221,45 @@
 
         .text-link {
 
-            color:
-                #f5d98b;
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            background:
+
+                linear-gradient(
+                    115deg,
+                    #a06e00,
+                    #d9ad38,
+                    #fff0a0,
+                    #d4a52b,
+                    #9a6800
+                );
+
+            background-size:
+                250% auto;
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            animation:
+                goldShine 6s linear infinite;
 
             text-decoration:
                 none;
 
             font-weight:
                 700;
+
+            font-size:
+                17px;
         }
 
 
@@ -979,7 +1268,6 @@
             text-decoration:
                 underline;
         }
-
 
 
         /* =====================================================
@@ -1013,11 +1301,16 @@
             gap:
                 20px;
 
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
             color:
                 #94a3b8;
 
             font-size:
-                14px;
+                15px;
         }
 
 
@@ -1042,7 +1335,6 @@
             color:
                 #f5d98b;
         }
-
 
 
         /* =====================================================
@@ -1095,7 +1387,7 @@
             nav a {
 
                 font-size:
-                    12px;
+                    13px;
             }
 
 
@@ -1122,7 +1414,7 @@
             .hero p {
 
                 font-size:
-                    17px;
+                    18px;
             }
 
 
@@ -1190,9 +1482,8 @@
         }
 
 
-
         /* =====================================================
-           SMALL MOBILE
+           MOBILE
         ===================================================== */
 
         @media (max-width: 500px) {
@@ -1218,6 +1509,9 @@
 
                 font-size:
                     20px;
+
+                letter-spacing:
+                    0.5px;
             }
 
 
@@ -1272,9 +1566,7 @@
 </head>
 
 
-
 <body>
-
 
 
 <!-- =====================================================
@@ -1284,17 +1576,12 @@
 <header>
 
 
-    <!-- =================================================
-         PRINCIPIA PRESS BRAND
-    ================================================== -->
+    <!-- BRAND -->
 
     <a
         href="index.html"
         class="brand"
     >
-
-
-        <!-- LOGO IMAGE -->
 
         <img
             src="PP_black Backgrund.png"
@@ -1302,26 +1589,16 @@
             class="brand-logo"
         >
 
-
-        <!-- BRAND NAME -->
-
         <span class="brand-name">
-
             Principia Press
-
         </span>
-
 
     </a>
 
 
-
-    <!-- =================================================
-         NAVIGATION
-    ================================================== -->
+    <!-- NAVIGATION -->
 
     <nav>
-
 
         <a
             href="index.html"
@@ -1330,13 +1607,11 @@
             Home
         </a>
 
-
         <a
             href="ebooks.html"
         >
             E-Books
         </a>
-
 
         <a
             href="about.html"
@@ -1344,13 +1619,11 @@
             About
         </a>
 
-
         <a
             href="contact.html"
         >
             Contact
         </a>
-
 
     </nav>
 
@@ -1360,11 +1633,10 @@
 
 
 <!-- =====================================================
-     MAIN CONTENT
+     MAIN
 ===================================================== -->
 
 <main>
-
 
 
     <!-- =================================================
@@ -1461,7 +1733,6 @@
         </p>
 
 
-
         <div class="book-card">
 
 
@@ -1504,12 +1775,6 @@
                     </small>
 
                 </div>
-
-
-                <!--
-                    RAZORPAY PAYMENT BUTTON
-                    WILL BE ADDED HERE LATER.
-                -->
 
 
                 <a
@@ -1560,125 +1825,74 @@
         <div class="categories">
 
 
-            <!-- DIGITAL ELECTRONICS -->
-
             <div class="category">
 
-
                 <div class="category-number">
-
                     01
-
                 </div>
 
-
                 <h3>
-
                     Digital Electronics
-
                 </h3>
 
-
                 <p>
-
                     Logic design and fundamental
                     digital systems.
-
                 </p>
-
 
             </div>
 
 
-
-            <!-- VLSI -->
-
             <div class="category">
 
-
                 <div class="category-number">
-
                     02
-
                 </div>
 
-
                 <h3>
-
                     VLSI
-
                 </h3>
 
-
                 <p>
-
                     Semiconductor and integrated
                     circuit design concepts.
-
                 </p>
-
 
             </div>
 
 
-
-            <!-- FPGA -->
-
             <div class="category">
 
-
                 <div class="category-number">
-
                     03
-
                 </div>
 
-
                 <h3>
-
                     FPGA
-
                 </h3>
 
-
                 <p>
-
                     FPGA design, prototyping and
                     hardware implementation.
-
                 </p>
-
 
             </div>
 
 
-
-            <!-- VERILOG -->
-
             <div class="category">
 
-
                 <div class="category-number">
-
                     04
-
                 </div>
 
-
                 <h3>
-
                     Verilog HDL
-
                 </h3>
 
-
                 <p>
-
                     RTL design and digital hardware
                     description.
-
                 </p>
-
 
             </div>
 
@@ -1773,47 +1987,38 @@
 
     <div>
 
-
         <a href="index.html">
             Home
         </a>
-
 
         <a href="ebooks.html">
             E-Books
         </a>
 
-
         <a href="about.html">
             About
         </a>
-
 
         <a href="contact.html">
             Contact
         </a>
 
-
         <a href="privacy.html">
             Privacy Policy
         </a>
-
 
         <a href="terms.html">
             Terms & Conditions
         </a>
 
-
         <a href="refund.html">
             Refund Policy
         </a>
-
 
     </div>
 
 
 </footer>
-
 
 
 </body>
