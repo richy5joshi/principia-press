@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | Principia Press</title>
+
+    <meta
+        name="description"
+        content="Privacy Policy for Principia Press, an independent technical publishing initiative."
+    >
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background: #050505;
+            color: #ffffff;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            height: 82px;
+            padding: 0 6%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #050505;
+
+            border-bottom: 1px solid
+                rgba(245, 217, 139, 0.18);
+        }
+
+
+        /* =====================================================
+           BRAND
+        ===================================================== */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .brand-logo {
+            width: 70px;
+            height: 70px;
+
+            object-fit: contain;
+            display: block;
+
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            font-family: "Times New Roman", Times, serif;
+
+            font-size: 32px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+            line-height: 1;
+
+            display: inline-block;
+
+            background:
+                linear-gradient(
+                    115deg,
+                    #8f6500 0%,
+                    #d4a72c 15%,
+                    #fff1a8 30%,
+                    #f5d36b 42%,
+                    #fff8cf 50%,
+                    #d6a62c 65%,
+                    #9b6b00 80%,
+                    #f6d66b 100%
+                );
+
+            background-size: 250% 100%;
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            animation: goldShine 5s linear infinite;
+
+            text-shadow:
+                0 0 10px rgba(245, 217, 139, 0.12);
+        }
+
+        .brand:hover .brand-name {
+            text-shadow:
+                0 0 20px rgba(245, 217, 139, 0.30);
+        }
+
+
+        /* =====================================================
+           GOLD SHINE
+        ===================================================== */
+
+        @keyframes goldShine {
+
+            0% {
+                background-position: 250% center;
+            }
+
+            100% {
+                background-position: -250% center;
+            }
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 42px;
+        }
+
+        nav a {
+            position: relative;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-family: "Times New Roman", Times, serif;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        nav a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -9px;
+
+            width: 0;
+            height: 2px;
+
+            background: #ffffff;
+
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a.active::after {
+            width: 100%;
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ===================================================== */
+
+        main {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 90px 6% 100px;
+        }
+
+
+        /* =====================================================
+           PAGE HEADER
+        ===================================================== */
+
+        .page-label {
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+
+            background:
+                linear-gradient(
+                    115deg,
+                    #a06e00,
+                    #d9ad38,
+                    #fff0a0,
+                    #d4a52b,
+                    #9a6800
+                );
+
+            background-size: 250% auto;
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                goldShine 6s linear infinite;
+        }
+
+        h1 {
+            font-size: clamp(42px, 6vw, 65px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            color: #94a3b8;
+
+            font-size: 18px;
+
+            max-width: 800px;
+
+            margin-bottom: 55px;
+        }
+
+
+        /* =====================================================
+           GOLD LINE
+        ===================================================== */
+
+        .gold-line {
+            width: 100px;
+
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #9b6b00,
+                    #fff0a3,
+                    #d4a52a
+                );
+
+            margin-bottom: 50px;
+        }
+
+
+        /* =====================================================
+           POLICY SECTIONS
+        ===================================================== */
+
+        .policy-section {
+            margin-bottom: 48px;
+
+            padding-bottom: 35px;
+
+            border-bottom:
+                1px solid
+                rgba(245, 217, 139, 0.12);
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+        }
+
+        .policy-section h2 {
+            font-size: 28px;
+
+            margin-bottom: 16px;
+
+            color: #ffffff;
+        }
+
+        .policy-section h3 {
+            font-size: 21px;
+
+            margin-top: 22px;
+
+            margin-bottom: 10px;
+
+            color: #f5d98b;
+        }
+
+        .policy-section p {
+            color: #cbd5e1;
+
+            font-size: 17px;
+
+            max-width: 900px;
+
+            margin-bottom: 15px;
+        }
+
+        .policy-section ul {
+            margin:
+
+                10px 0 15px 25px;
+
+            color: #cbd5e1;
+
+            font-size: 17px;
+        }
+
+        .policy-section li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            color: #f5d98b;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           CONTACT BOX
+        ===================================================== */
+
+        .contact-box {
+            margin-top: 25px;
+
+            padding: 25px 28px;
+
+            background: #0d0d0d;
+
+            border:
+                1px solid
+                rgba(245, 217, 139, 0.20);
+
+            border-left:
+                3px solid
+                #d4af37;
+        }
+
+        .contact-box p {
+            margin-bottom: 5px;
+        }
+
+        .contact-box a {
+            color: #f5d98b;
+
+            text-decoration: none;
+
+            font-weight: 700;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 40px 6%;
+
+            background: #030303;
+
+            border-top:
+                1px solid
+                rgba(245, 217, 139, 0.15);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+            color: #94a3b8;
+
+            font-size: 15px;
+        }
+
+        footer a {
+            color: #cbd5e1;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            transition:
+                color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #f5d98b;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 0 5%;
+                height: 75px;
+            }
+
+            .brand {
+                gap: 10px;
+            }
+
+            .brand-logo {
+                width: 52px;
+                height: 52px;
+            }
+
+            .brand-name {
+                font-size: 25px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            main {
+                padding:
+                    70px 5%
+                    80px;
+            }
+
+            footer {
+                padding: 30px 5%;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            footer a {
+                margin-left: 0;
+                margin-right: 18px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 500px) {
+
+            header {
+                height: 70px;
+            }
+
+            .brand-logo {
+                width: 43px;
+                height: 43px;
+            }
+
+            .brand-name {
+                font-size: 20px;
+                letter-spacing: 0.5px;
+            }
+
+            nav {
+                gap: 9px;
+            }
+
+            nav a {
+                font-size: 10px;
+            }
+
+            main {
+                padding:
+                    55px 5%
+                    70px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .policy-section h2 {
+                font-size: 25px;
+            }
+
+            .policy-section p,
+            .policy-section ul {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header>
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="PP_black Backgrund.png"
+                alt="Principia Press Logo"
+                class="brand-logo"
+            >
+
+            <span class="brand-name">
+                Principia Press
+            </span>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="ebooks.html">
+                E-Books
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
+
+    <main>
+
+
+        <div class="page-label">
+            Legal & Privacy
+        </div>
+
+
+        <h1>
+            Privacy Policy
+        </h1>
+
+
+        <p class="intro">
+
+            This Privacy Policy explains how Principia Press
+            handles information when you visit or use this
+            website and when you purchase or interact with
+            our digital publications.
+
+        </p>
+
+
+        <div class="gold-line"></div>
+
+
+        <!-- =================================================
+             1. INTRODUCTION
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                1. Introduction
+            </h2>
+
+            <p>
+
+                Principia Press is an independent technical
+                publishing initiative focused on technical
+                educational resources and digital publications
+                in areas including Electronics, VLSI, FPGA,
+                Verilog and digital design.
+
+            </p>
+
+            <p>
+
+                We respect your privacy and aim to handle
+                personal information responsibly.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             2. INFORMATION WE MAY COLLECT
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                2. Information We May Collect
+            </h2>
+
+            <p>
+
+                Depending on how you interact with Principia
+                Press, information that may be provided to us
+                can include:
+
+            </p>
+
+            <ul>
+
+                <li>
+                    Your name and email address when you
+                    contact us.
+                </li>
+
+                <li>
+                    Information necessary to process or
+                    support an e-book purchase.
+                </li>
+
+                <li>
+                    Information that you voluntarily provide
+                    when communicating with Principia Press.
+                </li>
+
+            </ul>
+
+            <p>
+
+                We do not intentionally request unnecessary
+                personal information through this website.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             3. PAYMENT INFORMATION
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                3. Payment Information
+            </h2>
+
+            <p>
+
+                When payment functionality is enabled,
+                payments may be processed through third-party
+                payment service providers such as Razorpay
+                or PhonePe.
+
+            </p>
+
+            <p>
+
+                Principia Press does not intend to directly
+                collect or store your complete debit card,
+                credit card, banking or UPI credentials.
+
+            </p>
+
+            <p>
+
+                Payment information is handled according to
+                the applicable privacy policies and security
+                practices of the payment provider used for
+                the transaction.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             4. HOW INFORMATION IS USED
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                4. How We Use Information
+            </h2>
+
+            <p>
+
+                Information provided to Principia Press may
+                be used for purposes such as:
+
+            </p>
+
+            <ul>
+
+                <li>
+                    Responding to enquiries and support
+                    requests.
+                </li>
+
+                <li>
+                    Processing and supporting e-book
+                    purchases.
+                </li>
+
+                <li>
+                    Providing purchased digital products.
+                </li>
+
+                <li>
+                    Communicating with customers regarding
+                    their transactions or support requests.
+                </li>
+
+                <li>
+                    Improving the website and our publications.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- =================================================
+             5. THIRD PARTY SERVICES
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                5. Third-Party Services
+            </h2>
+
+            <p>
+
+                Principia Press may use third-party services
+                for website hosting, payment processing,
+                communication, analytics or other necessary
+                website functions.
+
+            </p>
+
+            <p>
+
+                These third-party services may process
+                information according to their own terms and
+                privacy policies.
+
+            </p>
+
+            <p>
+
+                Where appropriate, links to relevant
+                third-party privacy policies may be provided
+                when those services are integrated into the
+                website.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             6. COOKIES AND TRACKING
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                6. Cookies and Tracking
+            </h2>
+
+            <p>
+
+                The current Principia Press website does not
+                intentionally use cookies for user account
+                authentication or advertising purposes.
+
+            </p>
+
+            <p>
+
+                If analytics, payment services or other
+                third-party technologies are added in the
+                future, those services may use cookies or
+                similar technologies according to their own
+                policies.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             7. DATA SECURITY
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                7. Data Security
+            </h2>
+
+            <p>
+
+                We take reasonable measures to protect
+                information provided to Principia Press.
+
+            </p>
+
+            <p>
+
+                However, no method of transmission or storage
+                over the Internet can be guaranteed to be
+                completely secure.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             8. DATA RETENTION
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                8. Data Retention
+            </h2>
+
+            <p>
+
+                Information may be retained for as long as
+                reasonably necessary to respond to enquiries,
+                provide services, maintain transaction records,
+                comply with applicable legal obligations, or
+                resolve disputes.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             9. CHILDREN'S PRIVACY
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                9. Children's Privacy
+            </h2>
+
+            <p>
+
+                Principia Press does not knowingly seek to
+                collect personal information from children
+                through the website.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             10. EXTERNAL LINKS
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                10. External Links
+            </h2>
+
+            <p>
+
+                The website may contain links to third-party
+                websites or services.
+
+            </p>
+
+            <p>
+
+                Principia Press is not responsible for the
+                privacy practices, content or security of
+                external websites. We recommend reviewing the
+                privacy policy of any third-party website you
+                visit.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             11. POLICY UPDATES
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                11. Updates to This Privacy Policy
+            </h2>
+
+            <p>
+
+                This Privacy Policy may be updated from time
+                to time to reflect changes in the website,
+                services, payment systems, legal requirements
+                or business practices.
+
+            </p>
+
+            <p>
+
+                The updated version will be published on this
+                page with the revised effective date.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             12. CONTACT
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                12. Contact Us
+            </h2>
+
+            <p>
+
+                If you have questions about this Privacy Policy
+                or how Principia Press handles information,
+                you can contact us using the details below.
+
+            </p>
+
+
+            <div class="contact-box">
+
+                <p>
+                    <span class="highlight">
+                        Principia Press
+                    </span>
+                </p>
+
+                <p>
+                    Email:
+                    <a href="mailto:principiapressofficial@gmail.com">
+                        principiapressofficial@gmail.com
+                    </a>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EFFECTIVE DATE
+        ================================================== -->
+
+        <section class="policy-section">
+
+            <h2>
+                Effective Date
+            </h2>
+
+            <p>
+
+                This Privacy Policy is effective from
+                <span class="highlight">
+                    September 2026
+                </span>.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div>
+            © 2026 Principia Press
+        </div>
+
+
+        <div>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="ebooks.html">
+                E-Books
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
