@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>200+ DE FAQs for Interview Prep | Principia Press</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #050505;
+    color: #f5f5f5;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.7;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    min-height: 78px;
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2b2110;
+    background: #050505;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.brand-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-name {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #C89B3C 0%,
+            #F5D98B 25%,
+            #FFFFFF 50%,
+            #F5D98B 75%,
+            #C89B3C 100%
+        );
+
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    animation: goldShine 5s linear infinite;
+}
+
+@keyframes goldShine {
+    0% {
+        background-position: 250% center;
+    }
+
+    100% {
+        background-position: -250% center;
+    }
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e1b84b;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 7% 65px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 70px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #C89B3C,
+            #F5D98B,
+            #FFFFFF,
+            #F5D98B,
+            #C89B3C
+        );
+
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    animation: goldShine 5s linear infinite;
+}
+
+.hero-content h2 {
+    font-size: 25px;
+    font-weight: normal;
+    color: #dddddd;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    color: #bdbdbd;
+    font-size: 18px;
+    max-width: 700px;
+}
+
+.gold-line {
+    width: 110px;
+    height: 2px;
+    background: #c89b3c;
+    margin: 25px 0;
+}
+
+/* ================= COVER ================= */
+
+.book-cover {
+    width: 100%;
+    height: 520px;
+    background: #07111d;
+    border: 1px solid #8f6b25;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 25px rgba(200, 155, 60, 0.08);
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* ================= INFO ================= */
+
+.book-info {
+    max-width: 1100px;
+    margin: 0 auto 70px;
+    padding: 0 7%;
+}
+
+.info-box {
+    border-top: 1px solid #3c2d12;
+    border-bottom: 1px solid #3c2d12;
+    padding: 25px 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-item strong {
+    display: block;
+    color: #d9b75a;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.info-item span {
+    color: #cfcfcf;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 7%;
+}
+
+.section h2 {
+    color: #e0bc5d;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.section > p {
+    color: #c5c5c5;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* ================= TOPIC GRID ================= */
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.topic-card {
+    border: 1px solid #3d2f15;
+    background: #0a0a0a;
+    padding: 25px;
+
+    transition: 0.3s;
+}
+
+.topic-card:hover {
+    border-color: #b58a32;
+    transform: translateY(-3px);
+}
+
+.topic-card h3 {
+    color: #e2c269;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.topic-card p {
+    color: #bcbcbc;
+}
+
+/* ================= FAQ HIGHLIGHT ================= */
+
+.faq-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 7%;
+}
+
+.faq-section h2 {
+    color: #e0bc5d;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.faq-intro {
+    color: #bdbdbd;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.faq-list {
+    display: grid;
+    gap: 12px;
+}
+
+.faq {
+    border: 1px solid #302510;
+    padding: 18px 22px;
+    background: #090909;
+}
+
+.faq strong {
+    color: #e0c36a;
+    font-size: 18px;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.feature {
+    border-left: 2px solid #a47c2b;
+    padding: 15px 20px;
+    background: #090909;
+}
+
+.feature h3 {
+    color: #e0c36a;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: #bcbcbc;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 55px 7%;
+    text-align: center;
+
+    border-top: 1px solid #8f6b25;
+    border-bottom: 1px solid #8f6b25;
+}
+
+.cta h2 {
+    font-size: 35px;
+    color: #e2c269;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #bdbdbd;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 32px;
+
+    border: 1px solid #c89b3c;
+    color: #e5c66f;
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #c89b3c;
+    color: #050505;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 30px 7%;
+    border-top: 1px solid #29200f;
+    color: #777;
+    font-size: 15px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 50px;
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .book-cover {
+        height: 450px;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .info-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .brand-name {
+        font-size: 25px;
+    }
+
+    .brand-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content h2 {
+        font-size: 21px;
+    }
+
+    .info-box {
+        grid-template-columns: 1fr;
+    }
+
+    .book-cover {
+        height: 400px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <a href="index.html" class="brand">
+
+        <img
+            src="./PP_black Backgrund.png"
+            alt="Principia Press Logo"
+            class="brand-logo"
+        >
+
+        <span class="brand-name">
+            Principia Press
+        </span>
+
+    </a>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="ebooks.html">E-Books</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            200+ DE FAQs
+            for Interview Prep
+        </h1>
+
+        <h2>
+            Digital Electronics Interview Preparation Guide
+        </h2>
+
+        <div class="gold-line"></div>
+
+        <p>
+            A question-focused Digital Electronics preparation
+            guide designed to help students and aspiring VLSI
+            engineers strengthen their fundamentals and prepare
+            for technical interviews.
+        </p>
+
+    </div>
+
+
+    <div class="book-cover">
+
+        <img
+            src="./200_FAQs_DE.png"
+            alt="200+ DE FAQs for Interview Prep"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOK INFO ================= -->
+
+<section class="book-info">
+
+    <div class="info-box">
+
+        <div class="info-item">
+            <strong>Format</strong>
+            <span>E-Book</span>
+        </div>
+
+        <div class="info-item">
+            <strong>Questions</strong>
+            <span>200+</span>
+        </div>
+
+        <div class="info-item">
+            <strong>Category</strong>
+            <span>Digital Electronics</span>
+        </div>
+
+        <div class="info-item">
+            <strong>Focus</strong>
+            <span>Interview Preparation</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section">
+
+    <h2>
+        About the E-Book
+    </h2>
+
+    <p>
+        Digital Electronics is one of the fundamental areas
+        commonly encountered in electronics and VLSI technical
+        interviews. This e-book brings together 200+ frequently
+        asked questions in a compact interview-preparation format.
+    </p>
+
+    <p>
+        Instead of searching through multiple notes and resources,
+        the questions are organized in one place to support faster
+        preparation, revision and self-testing.
+    </p>
+
+</section>
+
+
+<!-- ================= WHAT YOU WILL COVER ================= -->
+
+<section class="section">
+
+    <h2>
+        What You Will Cover
+    </h2>
+
+    <p>
+        The guide focuses on the core Digital Electronics concepts
+        that form the foundation for further studies in RTL,
+        FPGA and VLSI design.
+    </p>
+
+
+    <div class="topic-grid">
+
+        <div class="topic-card">
+
+            <h3>
+                Number Systems
+            </h3>
+
+            <p>
+                Binary, decimal, hexadecimal and other fundamental
+                number-system concepts used in digital design.
+            </p>
+
+        </div>
+
+
+        <div class="topic-card">
+
+            <h3>
+                Logic Gates
+            </h3>
+
+            <p>
+                Fundamental logic gates and their behavior,
+                applications and interview concepts.
+            </p>
+
+        </div>
+
+
+        <div class="topic-card">
+
+            <h3>
+                Boolean Algebra
+            </h3>
+
+            <p>
+                Boolean expressions, laws, simplification and
+                important logic-design principles.
+            </p>
+
+        </div>
+
+
+        <div class="topic-card">
+
+            <h3>
+                Combinational Logic
+            </h3>
+
+            <p>
+                MUX, DEMUX, encoders, decoders, adders,
+                subtractors and related circuits.
+            </p>
+
+        </div>
+
+
+        <div class="topic-card">
+
+            <h3>
+                Sequential Logic
+            </h3>
+
+            <p>
+                Latches, flip-flops, registers, counters and
+                fundamental sequential-circuit concepts.
+            </p>
+
+        </div>
+
+
+        <div class="topic-card">
+
+            <h3>
+                Interview Concepts
+            </h3>
+
+            <p>
+                Conceptual and practical questions intended
+                for technical interview preparation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAQ HIGHLIGHT ================= -->
+
+<section class="faq-section">
+
+    <h2>
+        Why 200+ Questions?
+    </h2>
+
+    <p class="faq-intro">
+        A large question bank allows you to move beyond simply
+        reading theory and test whether you can actually recall,
+        explain and apply important Digital Electronics concepts.
+    </p>
+
+
+    <div class="faq-list">
+
+        <div class="faq">
+            <strong>
+                Fundamental Concepts
+            </strong>
+            <p>
+                Strengthen the concepts that form the foundation
+                of digital circuit design.
+            </p>
+        </div>
+
+
+        <div class="faq">
+            <strong>
+                Interview Revision
+            </strong>
+            <p>
+                Use the questions for quick revision before
+                technical interviews.
+            </p>
+        </div>
+
+
+        <div class="faq">
+            <strong>
+                Self-Assessment
+            </strong>
+            <p>
+                Test yourself without depending entirely on
+                conventional textbook-style preparation.
+            </p>
+        </div>
+
+
+        <div class="faq">
+            <strong>
+                Faster Preparation
+            </strong>
+            <p>
+                Keep important Digital Electronics interview
+                questions organized in one place.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="section">
+
+    <h2>
+        Designed for Interview Preparation
+    </h2>
+
+    <div class="features">
+
+        <div class="feature">
+
+            <h3>
+                Question-Focused
+            </h3>
+
+            <p>
+                Built around questions rather than lengthy
+                theoretical chapters.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h3>
+                Beginner Friendly
+            </h3>
+
+            <p>
+                Suitable for students building their Digital
+                Electronics fundamentals.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h3>
+                Quick Revision
+            </h3>
+
+            <p>
+                Useful as a compact revision resource before
+                technical interviews.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h3>
+                VLSI Foundation
+            </h3>
+
+            <p>
+                Digital Electronics fundamentals provide an
+                important base for RTL and VLSI preparation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHO IS THIS FOR ================= -->
+
+<section class="section">
+
+    <h2>
+        Who Is This E-Book For?
+    </h2>
+
+    <div class="topic-grid">
+
+        <div class="topic-card">
+
+            <h3>
+                ECE Students
+            </h3>
+
+            <p>
+                Students preparing for electronics and VLSI
+                technical interviews.
+            </p>
+
+        </div>
+
+
+        <div class="topic-card">
+
+            <h3>
+                VLSI Aspirants
+            </h3>
+
+            <p>
+                Candidates preparing for RTL, FPGA and
+                entry-level VLSI opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="topic-card">
+
+            <h3>
+                Interview Revision
+            </h3>
+
+            <p>
+                Anyone looking for a structured Digital
+                Electronics question bank for revision.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+        Prepare Smarter for Your Next Interview
+    </h2>
+
+    <p>
+        Build your Digital Electronics fundamentals,
+        revise important concepts and test yourself
+        with 200+ interview-focused questions.
+    </p>
+
+    <a href="#" class="button">
+        Buy Now
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 Principia Press. All Rights Reserved.
+
+</footer>
+
+
+</body>
+</html>
