@@ -5,7 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Contact | Principia Press</title>
 
@@ -14,7 +17,9 @@
         content="Contact Principia Press for e-book enquiries, purchase support, digital delivery assistance and general enquiries."
     >
 
+
     <style>
+
 
         /* =====================================================
            PRINCIPIA PRESS
@@ -29,18 +34,23 @@
         ===================================================== */
 
 
+
         /* =====================================================
            RESET
         ===================================================== */
 
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
         }
 
 
         html {
+
             scroll-behavior: smooth;
         }
 
@@ -48,17 +58,21 @@
         body {
 
             font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
+                "Times New Roman",
+                Times,
+                serif;
 
-            background: #050505;
+            background:
+                #050505;
 
-            color: #ffffff;
+            color:
+                #ffffff;
 
-            line-height: 1.6;
+            line-height:
+                1.6;
 
-            overflow-x: hidden;
+            overflow-x:
+                hidden;
         }
 
 
@@ -69,21 +83,29 @@
 
         header {
 
-            height: 82px;
+            height:
+                82px;
 
-            padding: 0 6%;
+            padding:
+                0 6%;
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            justify-content: space-between;
+            justify-content:
+                space-between;
 
-            position: sticky;
+            position:
+                sticky;
 
-            top: 0;
+            top:
+                0;
 
-            z-index: 1000;
+            z-index:
+                1000;
 
             background:
                 rgba(5, 5, 5, 0.95);
@@ -99,40 +121,101 @@
 
 
         /* =====================================================
-           LOGO
+           BRAND
         ===================================================== */
 
-        .logo {
+        .brand {
 
-            width: 190px;
+            display:
+                flex;
 
-            height: 60px;
+            align-items:
+                center;
 
-            display: flex;
+            gap:
+                12px;
 
-            align-items: center;
+            text-decoration:
+                none;
+
+            white-space:
+                nowrap;
         }
 
 
-        .logo a {
+        .brand-logo {
 
-            display: flex;
+            width:
+                55px;
 
-            align-items: center;
+            height:
+                55px;
 
-            text-decoration: none;
+            object-fit:
+                contain;
+
+            display:
+                block;
         }
 
 
-        .logo img {
+        .brand-name {
 
-            width: 190px;
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
 
-            height: 60px;
+            font-size:
+                32px;
 
-            object-fit: contain;
+            font-weight:
+                700;
 
-            display: block;
+            letter-spacing:
+                0.5px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #C89B3C 0%,
+                    #F5D98B 25%,
+                    #FFFFFF 50%,
+                    #F5D98B 75%,
+                    #C89B3C 100%
+                );
+
+            background-size:
+                250% auto;
+
+            -webkit-background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            background-clip:
+                text;
+
+            animation:
+                goldShine 5s linear infinite;
+        }
+
+
+        @keyframes goldShine {
+
+            0% {
+
+                background-position:
+                    250% center;
+            }
+
+            100% {
+
+                background-position:
+                    -250% center;
+            }
         }
 
 
@@ -144,25 +227,38 @@
 
         nav {
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            gap: 42px;
+            gap:
+                42px;
         }
 
 
         nav a {
 
-            position: relative;
+            position:
+                relative;
 
-            color: #ffffff;
+            color:
+                #ffffff;
 
-            text-decoration: none;
+            text-decoration:
+                none;
 
-            font-size: 15px;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-            font-weight: 600;
+            font-size:
+                15px;
+
+            font-weight:
+                600;
 
             transition:
                 color 0.3s ease;
@@ -171,19 +267,26 @@
 
         nav a::after {
 
-            content: "";
+            content:
+                "";
 
-            position: absolute;
+            position:
+                absolute;
 
-            left: 0;
+            left:
+                0;
 
-            bottom: -9px;
+            bottom:
+                -9px;
 
-            width: 0;
+            width:
+                0;
 
-            height: 2px;
+            height:
+                2px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
             transition:
                 width 0.3s ease;
@@ -192,27 +295,32 @@
 
         nav a:hover {
 
-            color: #ffffff;
+            color:
+                #ffffff;
         }
 
 
         nav a:hover::after {
 
-            width: 100%;
+            width:
+                100%;
         }
 
 
         nav .active {
 
-            color: #ffffff;
+            color:
+                #ffffff;
         }
 
 
         nav .active::after {
 
-            width: 100%;
+            width:
+                100%;
 
-            background: #ffffff;
+            background:
+                #ffffff;
         }
 
 
@@ -223,15 +331,20 @@
 
         .hero {
 
-            min-height: 560px;
+            min-height:
+                560px;
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            position: relative;
+            position:
+                relative;
 
-            overflow: hidden;
+            overflow:
+                hidden;
 
             padding:
                 100px 6%
@@ -262,23 +375,30 @@
 
         .hero::before {
 
-            content: "";
+            content:
+                "";
 
-            position: absolute;
+            position:
+                absolute;
 
-            width: 430px;
+            width:
+                430px;
 
-            height: 430px;
+            height:
+                430px;
 
-            border-radius: 50%;
+            border-radius:
+                50%;
 
             border:
                 1px solid
                 rgba(245, 217, 139, 0.10);
 
-            right: -160px;
+            right:
+                -160px;
 
-            top: -150px;
+            top:
+                -150px;
 
             animation:
                 floatingGlow 8s ease-in-out infinite;
@@ -287,23 +407,30 @@
 
         .hero::after {
 
-            content: "";
+            content:
+                "";
 
-            position: absolute;
+            position:
+                absolute;
 
-            width: 280px;
+            width:
+                280px;
 
-            height: 280px;
+            height:
+                280px;
 
-            border-radius: 50%;
+            border-radius:
+                50%;
 
             border:
                 1px solid
                 rgba(245, 217, 139, 0.07);
 
-            left: -130px;
+            left:
+                -130px;
 
-            bottom: -130px;
+            bottom:
+                -130px;
 
             animation:
                 floatingGlow 10s ease-in-out infinite reverse;
@@ -313,36 +440,48 @@
         @keyframes floatingGlow {
 
             0% {
-                transform: translateY(0);
+
+                transform:
+                    translateY(0);
             }
 
             50% {
-                transform: translateY(18px);
+
+                transform:
+                    translateY(18px);
             }
 
             100% {
-                transform: translateY(0);
+
+                transform:
+                    translateY(0);
             }
         }
 
 
         .hero-content {
 
-            max-width: 1100px;
+            max-width:
+                1100px;
 
-            width: 100%;
+            width:
+                100%;
 
-            margin: auto;
+            margin:
+                auto;
 
-            position: relative;
+            position:
+                relative;
 
-            z-index: 2;
+            z-index:
+                2;
         }
 
 
         .hero-label {
 
-            display: inline-block;
+            display:
+                inline-block;
 
             padding:
                 8px 16px;
@@ -362,6 +501,11 @@
 
             color:
                 #f5d98b;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-size:
                 12px;
@@ -462,6 +606,11 @@
 
             color:
                 #f5d98b;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-size:
                 12px;
@@ -575,17 +724,23 @@
 
         .contact-card::before {
 
-            content: "";
+            content:
+                "";
 
-            position: absolute;
+            position:
+                absolute;
 
-            top: 0;
+            top:
+                0;
 
-            left: 0;
+            left:
+                0;
 
-            width: 100%;
+            width:
+                100%;
 
-            height: 3px;
+            height:
+                3px;
 
             background:
 
@@ -627,6 +782,11 @@
 
 
         .card-number {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-size:
                 13px;
@@ -788,6 +948,11 @@
 
             text-decoration:
                 none;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-weight:
                 800;
@@ -1020,6 +1185,11 @@
             color:
                 #94a3b8;
 
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             font-size:
                 14px;
         }
@@ -1055,30 +1225,44 @@
 
         @media (max-width: 800px) {
 
+
             header {
 
+                height:
+                    auto;
+
+                min-height:
+                    82px;
+
                 padding:
-                    0 5%;
+                    15px 5%;
+
+                gap:
+                    15px;
             }
 
 
-            .logo {
+            .brand {
 
-                width:
-                    125px;
-
-                height:
-                    50px;
+                gap:
+                    8px;
             }
 
 
-            .logo img {
+            .brand-logo {
 
                 width:
-                    125px;
+                    42px;
 
                 height:
-                    50px;
+                    42px;
+            }
+
+
+            .brand-name {
+
+                font-size:
+                    23px;
             }
 
 
@@ -1183,12 +1367,48 @@
         }
 
 
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
         @media (max-width: 500px) {
+
+
+            header {
+
+                align-items:
+                    flex-start;
+            }
+
+
+            .brand-name {
+
+                font-size:
+                    20px;
+            }
+
+
+            .brand-logo {
+
+                width:
+                    38px;
+
+                height:
+                    38px;
+            }
+
 
             nav {
 
                 gap:
                     10px;
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    flex-end;
             }
 
 
@@ -1205,14 +1425,24 @@
                     30px;
             }
 
+
+            .hero h1 {
+
+                font-size:
+                    44px;
+            }
+
         }
+
 
     </style>
 
 </head>
 
 
+
 <body>
+
 
 
 <!-- =====================================================
@@ -1222,40 +1452,62 @@
 <header>
 
 
-    <div class="logo">
+    <a
+        href="index.html"
+        class="brand"
+    >
 
-        <a href="index.html">
+        <img
+            src="PP_black Backgrund.png"
+            alt="Principia Press Logo"
+            class="brand-logo"
+        >
 
-            <img
-                src="PP_black Backgrund.png"
-                alt="Principia Press Logo"
-            >
 
-        </a>
+        <span class="brand-name">
 
-    </div>
+            Principia Press
+
+        </span>
+
+
+    </a>
+
 
 
     <nav>
 
+
         <a href="index.html">
+
             Home
+
         </a>
+
 
         <a href="ebooks.html">
+
             E-Books
+
         </a>
 
+
         <a href="about.html">
+
             About
+
         </a>
+
 
         <a
             href="contact.html"
             class="active"
         >
+
             Contact
+
         </a>
+
 
     </nav>
 
@@ -1756,40 +2008,5 @@
 
     <div>
 
-        <a href="index.html">
-            Home
-        </a>
 
-        <a href="ebooks.html">
-            E-Books
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-        <a href="privacy.html">
-            Privacy Policy
-        </a>
-
-        <a href="terms.html">
-            Terms & Conditions
-        </a>
-
-        <a href="refund.html">
-            Refund Policy
-        </a>
-
-    </div>
-
-
-</footer>
-
-
-</body>
-
-</html>
+        <
