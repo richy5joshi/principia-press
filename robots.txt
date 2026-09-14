@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://richy5joshi.github.io/principia-press/sitemap.xml
